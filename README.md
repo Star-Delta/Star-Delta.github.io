@@ -1,4 +1,1 @@
-Star-Delta
-==
-hoge
-a
+test
