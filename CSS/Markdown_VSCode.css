@@ -1,0 +1,12 @@
+.vscode-body h1 {
+    font-size: 200%;
+    text-align: center;
+    background: var(--color-headline-default);
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    box-shadow: 5px 5px 0 var(--color-headline-muted), 10px 10px 0 var(--color-headline-subtle);
+    margin-right: 10px;
+    padding: 1%;
+    border: none;
+  }
+  
