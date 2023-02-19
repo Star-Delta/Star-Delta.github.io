@@ -1,11 +1,15 @@
 .vscode-dark {
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
     --color-headline-default: DarkOliveGreen;
     --color-headline-muted: Olive;
     --color-headline-subtle: OliveDrab;
 }
 
 .vscode-light {
-    --color-headline-default: DarkSeaGreen;
+    --color-border-default: #d0d7de;
+    --color-border-muted: hsla(210,18%,87%,1);
+  --color-headline-default: DarkSeaGreen;
     --color-headline-muted: MediumSeaGreen;
     --color-headline-subtle: SeaGreen;
 }
@@ -26,9 +30,9 @@ html {
     margin-right: 10px;
     padding: 1%;
     border: none;
-  }
+}
 
-  .vscode-body h2 {
+.vscode-body h2 {
     font-size: 200%;
     background: var(--color-headline-default);
     print-color-adjust: exact;
@@ -36,38 +40,43 @@ html {
     border-left: solid 5px var(--color-headline-muted);
     border-bottom: solid 2.5px var(--color-headline-subtle);
     padding-left: 5px;
-  }
-  .vscode-body h3 {
+}
+
+.vscode-body h3 {
     font-size: 200%;
     border-left: solid 10px var(--color-headline-muted);
     border-bottom: solid 2.5px var(--color-headline-subtle);
     padding-left: 10px;
-  }
+}
   
-  .vscode-body h4 {
+.vscode-body h4 {
     font-size: 175%;
     position: relative;
     border-bottom: solid thick;
     border-image: linear-gradient(to right, var(--color-headline-default) 0%, var(--color-headline-muted) 60%, var(--color-headline-subtle) 100%);
     border-image-slice: 1;
     display: table;
-  }
-  
-  .vscode-body h5 {
+}
+
+.vscode-body h5 {
     font-size: 150%;
     position: relative;
     border-bottom: solid medium;
     border-image: linear-gradient(to right, var(--color-headline-default) 0%, var(--color-headline-muted) 40%, var(--color-headline-subtle) 100%);
     border-image-slice: 1;
     display: table;
-  }
-  
-  .vscode-body h6 {
+}
+
+.vscode-body h6 {
     font-size: 125%;
     position: relative;
     border-bottom: solid thin;
     border-image: linear-gradient(to right, var(--color-headline-default) 0%, var(--color-headline-muted) 20%, var(--color-headline-subtle) 100%);
     border-image-slice: 1;
     display: table;
-  }
-  
+}
+
+.vscode-body pre {
+  border: inset thin;
+  border-color: var(--color-border-default);
+}
