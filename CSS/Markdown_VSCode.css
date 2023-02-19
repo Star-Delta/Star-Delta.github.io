@@ -1,10 +1,12 @@
 .vscode-dark {
+    color-scheme: dark;
     --color-headline-default: DarkOliveGreen	;
     --color-headline-muted: Olive;
     --color-headline-subtle: OliveDrab;
 }
 
 .vscode-light {
+    color-scheme: light;
     --color-headline-default: DarkSeaGreen	;
     --color-headline-muted: MediumSeaGreen;
     --color-headline-subtle: SeaGreen;
