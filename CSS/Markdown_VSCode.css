@@ -1,3 +1,15 @@
+.vscode-dark {
+    --color-headline-default: DarkOliveGreen	;
+    --color-headline-muted: Olive;
+    --color-headline-subtle: OliveDrab;
+}
+
+.vscode-light {
+    --color-headline-default: DarkSeaGreen	;
+    --color-headline-muted: MediumSeaGreen;
+    --color-headline-subtle: SeaGreen;
+}
+
 .vscode-body h1 {
     font-size: 200%;
     text-align: center;
