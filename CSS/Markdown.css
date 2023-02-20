@@ -1,0 +1,163 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        color-scheme: dark;
+        --color-canvas-default: DimGray;
+        --color-canvas-muted: Gray;
+        --color-canvas-subtle: DarkGray;
+        --color-border-default: #30363d;
+        --color-border-muted: #21262d;
+        --color-headline-default: DarkOliveGreen	;
+        --color-headline-muted: Olive;
+        --color-headline-subtle: OliveDrab;
+        --color-danger: red;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        color-scheme: light;
+        --color-canvas-default: White;
+        --color-canvas-muted: GhostWhite;
+        --color-canvas-subtle: WhiteSmoke;
+        --color-border-default: LightGray;
+        --color-border-muted: DarkGray;
+        --color-border-subtle: Gray;
+        --color-headline-default: DarkSeaGreen	;
+        --color-headline-muted: MediumSeaGreen;
+        --color-headline-subtle: SeaGreen;
+        --color-danger: red;
+    }
+}
+
+body {
+    --font-size:16px;
+    --margin: 1px;
+    --margin-bottom: calc(var(--font-size) / 2);
+    margin: var(--margin);
+    margin-bottom: var(--margin-bottom);
+    border: unset;
+    padding: unset;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+    font-size: var(--font-size);
+}
+
+p{
+    margin: inherit;
+    border: unset;
+    padding: unset;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    --size-headline-decoration:10px;
+    margin: inherit;
+    margin-bottom: calc(var(--size-headline-decoration) / 2);
+}
+
+h1 {
+    font-size: 200%;
+    text-align: center;
+    background: var(--color-headline-default);
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    box-shadow: var(--size-headline-decoration) calc(var(--size-headline-decoration) / 2) 0 var(--color-headline-muted), calc(var(--size-headline-decoration) * 2) var(--size-headline-decoration) 0 var(--color-headline-subtle);
+    margin-right: calc(var(--size-headline-decoration) * 2);
+    margin-bottom: calc(var(--size-headline-decoration) * 1.5);
+    padding: unset;
+    border: none;
+}
+
+h2 {
+    font-size: 200%;
+    background: var(--color-headline-default);
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    border-left: solid var(--size-headline-decoration) var(--color-headline-muted);
+    border-bottom: solid calc(var(--size-headline-decoration) / 2) var(--color-headline-subtle);
+    padding-left: calc(var(--size-headline-decoration) / 2);
+}
+
+h3 {
+    font-size: 200%;
+    border-left: solid calc(var(--size-headline-decoration) * 2) var(--color-headline-muted);
+    border-bottom: solid calc(var(--size-headline-decoration) / 2) var(--color-headline-subtle);
+    padding-left: calc(var(--size-headline-decoration) / 2);
+}
+  
+h4 {
+    font-size: 175%;
+    position: relative;
+    border-bottom: solid thick;
+    border-image: linear-gradient(to right, var(--color-headline-default) 0%, var(--color-headline-muted) 60%, var(--color-headline-subtle) 100%);
+    border-image-slice: 1;
+    display: table;
+}
+
+h5 {
+    font-size: 150%;
+    position: relative;
+    border-bottom: solid medium;
+    border-image: linear-gradient(to right, var(--color-headline-default) 0%, var(--color-headline-muted) 40%, var(--color-headline-subtle) 100%);
+    border-image-slice: 1;
+    display: table;
+}
+
+h6 {
+    font-size: 125%;
+    position: relative;
+    border-bottom: solid thin;
+    border-image: linear-gradient(to right, var(--color-headline-default) 0%, var(--color-headline-muted) 20%, var(--color-headline-subtle) 100%);
+    border-image-slice: 1;
+    display: table;
+}
+
+pre {
+    margin: inherit;
+    border: inset thin;
+    border-color: var(--color-border-default);
+    padding: 1px;
+    overflow: auto;
+}
+
+em {text-decoration: underline;}
+strong {color: var(--color-danger);}
+
+ol,
+ul {
+    margin: inherit;
+    border: unset;
+    padding: inherit;
+    padding-left: calc(var(--font-size) * 2);
+}
+
+table {
+    margin: inherit;
+    border:solid 1px var( --color-border-default) ;
+    border-spacing: unset;
+    padding: inherit;
+}
+th,
+td {
+    margin: unset;
+    border:solid 0.5px var( --color-border-muted) ;
+    padding: inherit;
+}
+
+thead>tr {
+    background-color: var(--color-canvas-subtle);
+}
+tbody>tr:nth-of-type(2n-0){
+    background-color: var(--color-canvas-muted);
+}
+blockquote{
+    margin: inherit;
+    border: inherit;
+    border-left: solid calc(var(--font-size) / 2) var(--color-border-default);
+    padding: inherit;
+    padding-left: calc(var(--font-size) / 2);
+    background-color: var(--color-canvas-muted);
+}
