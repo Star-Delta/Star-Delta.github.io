@@ -1,15 +1,16 @@
 @media (prefers-color-scheme: dark) {
     body {
         color-scheme: dark;
-        --color-canvas-default: DimGray;
-        --color-canvas-muted: Gray;
-        --color-canvas-subtle: DarkGray;
+        --color-canvas-default: Black;
+        --color-canvas-muted: DarkSlateGray;
+        --color-canvas-subtle: DimGray;
         --color-border-default: #30363d;
         --color-border-muted: #21262d;
         --color-headline-default: DarkOliveGreen	;
         --color-headline-muted: Olive;
         --color-headline-subtle: OliveDrab;
         --color-danger: red;
+        --color-syntax:Goldenrod;
     }
 }
 
@@ -26,18 +27,24 @@
         --color-headline-muted: MediumSeaGreen;
         --color-headline-subtle: SeaGreen;
         --color-danger: red;
+        --color-syntax:DarkGoldenrod;
     }
 }
 
 body {
-    --font-size:16px;
+    --font-size:14px;
     --margin: 1px;
     --margin-bottom: calc(var(--font-size) / 2);
     margin: var(--margin);
     margin-bottom: var(--margin-bottom);
     border: unset;
     padding: unset;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+    background-color: var(--color-canvas-default);
+    font-family:
+        "Helvetica Neue",			/* macOS/iOS/iPadOS(英文) */
+        "Hiragino Kaku Gothic ProN",	/* Mac OS X 10.5(2006年) */
+        Meiryo,				/* Windows Vista(2006年) */
+        sans-selif;				/* 上記以外 */
     font-size: var(--font-size);
 }
 
@@ -45,6 +52,46 @@ p{
     margin: inherit;
     border: unset;
     padding: unset;
+}
+
+pre {
+    margin: var(--margin);
+    margin-bottom: var(--margin-bottom);
+    border: inset thin;
+    border-color: var(--color-border-default);
+    border-radius: 5px;
+    padding: 1px;
+    overflow: auto;
+}
+
+code,
+span{
+    font-family:
+        Menlo,				/* Mac OS X 10.6(2009年) */
+        Consolas,				/* Windows Vista(2006年) */
+        "Hiragino Kaku Gothic ProN",	/* 和文コメント用：Mac OS X 10.5(2006年) */
+        Meiryo,				/* 和文コメント用：Windows Vista(2006年) */
+        monospace;				/* 上記以外 */
+}
+
+p>code,
+h1>code,
+h2>code,
+h3>code,
+h4>code,
+h5>code,
+h6>code,
+li>code{
+    border: inset thin;
+    border-color: var(--color-border-default);
+    border-radius: 5px;
+    padding: 0px 1px;
+    /* color: var(--color-syntax); */
+}
+
+pre>code,
+p>code{
+    font-size: calc(var(--font-size) * 0.9);
 }
 
 h1,
@@ -115,23 +162,21 @@ h6 {
     display: table;
 }
 
-pre {
-    margin: inherit;
-    border: inset thin;
-    border-color: var(--color-border-default);
-    padding: 1px;
-    overflow: auto;
-}
-
 em {text-decoration: underline;}
 strong {color: var(--color-danger);}
 
 ol,
 ul {
-    margin: inherit;
+    margin: var(--margin);
+    margin-bottom: var(--margin-bottom);
     border: unset;
     padding: inherit;
     padding-left: calc(var(--font-size) * 2);
+}
+
+li>ol,
+li>ul{
+    margin: var(--margin);
 }
 
 table {
@@ -153,8 +198,10 @@ thead>tr {
 tbody>tr:nth-of-type(2n-0){
     background-color: var(--color-canvas-muted);
 }
+
 blockquote{
-    margin: inherit;
+    margin: var(--margin);
+    margin-bottom: var(--margin-bottom);
     border: inherit;
     border-left: solid calc(var(--font-size) / 2) var(--color-border-default);
     padding: inherit;
