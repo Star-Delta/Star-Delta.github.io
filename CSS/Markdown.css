@@ -208,3 +208,14 @@ blockquote{
     padding-left: calc(var(--font-size) / 2);
     background-color: var(--color-canvas-muted);
 }
+@media print {
+    h1{
+        margin-top: 50vh;
+    }
+    h1 + p {
+        text-align:center;
+    }
+    h2{
+        page-break-before:always;
+    }
+}
