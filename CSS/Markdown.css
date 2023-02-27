@@ -81,7 +81,9 @@ h3>code,
 h4>code,
 h5>code,
 h6>code,
-li>code{
+li>code,
+th>code,
+td>code{
     border: inset thin;
     border-color: var(--color-border-default);
     border-radius: 5px;
@@ -90,7 +92,9 @@ li>code{
 }
 
 pre>code,
-p>code{
+p>code,
+th>code,
+td>code{
     font-size: calc(var(--font-size) * 0.9);
 }
 
