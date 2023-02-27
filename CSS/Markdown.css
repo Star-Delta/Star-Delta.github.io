@@ -189,7 +189,7 @@ th,
 td {
     margin: unset;
     border:solid 0.5px var( --color-border-muted) ;
-    padding: inherit;
+    padding: 1px;
 }
 
 thead>tr {
