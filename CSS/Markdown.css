@@ -87,7 +87,7 @@ td>code{
     border: inset thin;
     border-color: var(--color-border-default);
     border-radius: 5px;
-    padding: 0px 1px;
+    padding:1px;
     /* color: var(--color-syntax); */
 }
 
