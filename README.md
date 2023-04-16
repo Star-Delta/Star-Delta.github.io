@@ -1,3 +1,5 @@
+[Star-Delta.github.io](https://github.com/Star-Delta/Star-Delta.github.io)
+==
 
 当リポジトリにて公開されているドキュメントについて
 * 改変・二次配布禁止
