@@ -48,12 +48,6 @@ body {
     font-size: var(--font-size);
 }
 
-p{
-    margin: inherit;
-    border: unset;
-    padding: unset;
-}
-
 pre {
     margin: var(--margin);
     margin-bottom: var(--margin-bottom);
@@ -166,21 +160,10 @@ h6 {
     display: table;
 }
 
-em {text-decoration: underline;}
-strong {color: var(--color-danger);}
-
-ol,
-ul {
-    margin: var(--margin);
-    margin-bottom: var(--margin-bottom);
+p{
+    margin: inherit;
     border: unset;
-    padding: inherit;
-    padding-left: calc(var(--font-size) * 2);
-}
-
-li>ol,
-li>ul{
-    margin: var(--margin);
+    padding: unset;
 }
 
 table {
@@ -203,15 +186,33 @@ tbody>tr:nth-of-type(2n-0){
     background-color: var(--color-canvas-muted);
 }
 
-blockquote{
+em {text-decoration: underline;}
+strong {color: var(--color-danger);}
+
+ol,
+ul {
     margin: var(--margin);
     margin-bottom: var(--margin-bottom);
-    border: inherit;
-    border-left: solid calc(var(--font-size) / 2) var(--color-border-default);
+    border: unset;
     padding: inherit;
-    padding-left: calc(var(--font-size) / 2);
-    background-color: var(--color-canvas-muted);
+    padding-left: calc(var(--font-size) * 2);
 }
+
+li>ol,
+li>ul{
+    margin: var(--margin);
+}
+
+blockquote{
+    background-color: var(--color-canvas-muted);
+    margin: var(--margin);
+    margin-bottom: var(--margin-bottom);
+    border: unset;
+    border-left: solid calc(var(--font-size) / 2) var(--color-border-default);
+    padding: unset;
+    padding-left: calc(var(--font-size) / 2);
+}
+
 @media print {
     h1{
         margin-top: 50vh;
