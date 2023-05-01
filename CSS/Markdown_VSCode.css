@@ -1,21 +1,29 @@
 .vscode-dark {
-    --color-border-default: #30363d;
-    --color-border-muted: #21262d;
-    --color-headline-default: DarkOliveGreen;
+    --color-canvas-default: #1f2933;
+    --color-canvas-muted: #323f4b;
+    --color-canvas-subtle: #3e4c59;
+    --color-border-default: #52606d;
+    --color-border-muted: #616e7c;
+    --color-border-subtle: #7b8794;
+    --color-headline-default: DarkOliveGreen	;
     --color-headline-muted: Olive;
     --color-headline-subtle: OliveDrab;
+    --color-danger: red;
+    --color-syntax:Goldenrod;
 }
 
 .vscode-light {
-    --color-border-default: #d0d7de;
-    --color-border-muted: hsla(210,18%,87%,1);
-    --color-headline-default: DarkSeaGreen;
+    --color-canvas-default: White;
+    --color-canvas-muted: GhostWhite;
+    --color-canvas-subtle: WhiteSmoke;
+    --color-border-default: LightGray;
+    --color-border-muted: DarkGray;
+    --color-border-subtle: Gray;
+    --color-headline-default: DarkSeaGreen	;
     --color-headline-muted: MediumSeaGreen;
     --color-headline-subtle: SeaGreen;
-}
-
-.vscode-body {
-  --color-danger: red;
+    --color-danger: red;
+    --color-syntax:DarkGoldenrod;
 }
 
 body,
@@ -25,77 +33,142 @@ html {
 }
 
 .vscode-body {
-/* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"; */
-margin: 2px;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
-font-size: 16px;
-line-height: 1.5;
+    --font-size:14px;
+    --margin: calc(var(--font-size) / 10);
+    --margin-bottom: calc(var(--font-size) / 1);
+    margin: var(--margin);
+    margin-bottom: var(--margin-bottom);
+    border: none;
+    padding: none;
+    background-color: var(--color-canvas-default);
+    font-size: var(--font-size);
+    font-family:
+        "Helvetica Neue",			/* macOS/iOS/iPadOS(英文) */
+        "Hiragino Kaku Gothic ProN",	/* Mac OS X 10.5(2006年) */
+        Meiryo,				/* Windows Vista(2006年) */
+        sans-selif;				/* 上記以外 */
+        line-height: 1.2;
+}
+
+/* HeadLine */
+.vscode-body h1,
+.vscode-body h2,
+.vscode-body h3,
+.vscode-body h4,
+.vscode-body h5,
+.vscode-body h6{
+    margin: var(--margin);
+    margin-bottom: var(--margin-bottom);
+}
+
+.vscode-body h1,
+.vscode-body h2,
+.vscode-body h3{
+    font-size: 200%;
+    padding-top: calc(var(--font-size) / 2);
+}
+
+.vscode-body h4,
+.vscode-body h5,
+.vscode-body h6{
+    position: relative;
+    display: table;
 }
 
 .vscode-body h1 {
-    font-size: 200%;
     text-align: center;
     background: var(--color-headline-default);
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
-    box-shadow: 10px 5px 0 var(--color-headline-muted), 20px 10px 0 var(--color-headline-subtle);
-    margin-right: 20px;
-    padding: 1%;
+    box-shadow: var(--font-size) calc(var(--font-size) / 2) 0 var(--color-headline-muted), calc(var(--font-size) * 2) var(--font-size) 0 var(--color-headline-subtle);
+    margin-right: calc(var(--font-size) * 2);
+    margin-bottom: calc(var(--font-size) * 2);
     border: none;
 }
 
 .vscode-body h2 {
-    font-size: 200%;
     background: var(--color-headline-default);
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
-    border-left: solid 10px var(--color-headline-muted);
-    border-bottom: solid 5px var(--color-headline-subtle);
-    /* padding-left: 5px; */
+    border-left: solid var(--font-size) var(--color-headline-muted);
+    border-bottom: solid calc(var(--font-size) / 2) var(--color-headline-subtle);
+    padding-left: calc(var(--font-size) / 2);
 }
 
 .vscode-body h3 {
-    font-size: 200%;
-    border-left: solid 20px var(--color-headline-muted);
-    border-bottom: solid 5px var(--color-headline-subtle);
-    /* padding-left: 10px; */
+    border-left: solid calc(var(--font-size) * 2) var(--color-headline-muted);
+    border-bottom: solid calc(var(--font-size) / 2) var(--color-headline-subtle);
+    padding-left: calc(var(--font-size) / 2);
 }
   
 .vscode-body h4 {
     font-size: 175%;
-    position: relative;
-    border-bottom: solid thick;
-    border-image: linear-gradient(to right, var(--color-headline-default) 0%, var(--color-headline-muted) 60%, var(--color-headline-subtle) 100%);
-    border-image-slice: 1;
-    display: table;
+    border-bottom: solid thick var(--color-headline-default);
 }
 
 .vscode-body h5 {
     font-size: 150%;
-    position: relative;
-    border-bottom: solid medium;
-    border-image: linear-gradient(to right, var(--color-headline-default) 0%, var(--color-headline-muted) 40%, var(--color-headline-subtle) 100%);
-    border-image-slice: 1;
-    display: table;
+    border-bottom: solid medium var(--color-headline-muted);
 }
 
 .vscode-body h6 {
     font-size: 125%;
-    position: relative;
-    border-bottom: solid thin;
-    border-image: linear-gradient(to right, var(--color-headline-default) 0%, var(--color-headline-muted) 20%, var(--color-headline-subtle) 100%);
-    border-image-slice: 1;
-    display: table;
+    border-bottom: solid thin var(--color-headline-subtle);
+}
+
+.vscode-body p{
+    margin: var(--margin);
+    margin-bottom: var(--margin-bottom);
+    border: unset;
+    padding: unset;
+}
+
+/* Table */
+.vscode-body table {
+    margin: var(--margin);
+    margin-bottom: var(--margin-bottom);
+    border-style:solid;
+    border-width: medium;
+    border-color:var(--color-border-default);
+    border-spacing: unset;
+    padding: unset;
+}
+
+.vscode-body th,
+.vscode-body td {
+    margin: unset;
+    border-style:solid;
+    border-width: thin;
+    border-color:var(--color-border-default);
+    padding: calc(var(--font-size) * 0.1) calc(var(--font-size) * 0.2);
+}
+
+.vscode-body td{
+    border-top-style:dotted;
+    border-bottom-style:dotted;
+}
+
+.vscode-body thead>tr {
+    background-color: var(--color-canvas-subtle);
+}
+.vscode-body tbody>tr:nth-of-type(2n-0){
+    background-color: var(--color-canvas-muted);
 }
 
 .vscode-body pre {
-  border: inset thin;
-  border-color: var(--color-border-default);
+    background-color: var(--color-canvas-muted);
+    margin: var(--margin);
+    margin-bottom: var(--margin-bottom);
+    border: inset thin;
+    border-color: var(--color-border-default);
+    padding: calc(var(--font-size) * 0.25);
+    font-family:
+        Menlo, /* Mac OS X 10.6(2009年) */
+        Consolas, /* Windows Vista(2006年) */
+        "Hiragino Kaku Gothic ProN", /* 和文コメント用：Mac OS X 10.5(2006年) */
+        Meiryo, /* 和文コメント用：Windows Vista(2006年) */
+        monospace; /* 上記以外 */
 }
 
 .vscode-body strong {color: var(--color-danger);}
 .vscode-body em {text-decoration: underline;}
-
-.vscode-body h1,
-.vscode-body h2 {page-break-before:always;}
-.vscode-body h1:first-child {page-break-before:avoid;}
