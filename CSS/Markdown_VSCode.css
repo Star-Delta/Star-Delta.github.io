@@ -86,6 +86,11 @@ html {
     border: none;
     padding-bottom: unset;
 }
+@media print {
+    .vscode-body h1{
+        margin-top: 50vh;
+    }
+}
 
 .vscode-body h2 {
     background: var(--color-headline-default);
@@ -94,6 +99,11 @@ html {
     border-left: solid var(--font-size) var(--color-headline-muted);
     border-bottom: solid calc(var(--font-size) / 2) var(--color-headline-subtle);
     padding-left: calc(var(--font-size) / 2);
+}
+@media print {
+    .vscode-body h2 {
+        page-break-before:always;
+    }
 }
 
 .vscode-body h3 {
@@ -122,6 +132,12 @@ html {
     margin-bottom: var(--margin-bottom);
     border: unset;
     padding: unset;
+}
+
+@media print {
+    .vscode-body h1 + .vscode-body p {
+        text-align:center;
+    }
 }
 
 strong{
