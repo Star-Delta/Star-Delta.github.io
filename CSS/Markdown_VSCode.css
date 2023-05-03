@@ -33,7 +33,7 @@ html {
 }
 
 .vscode-body {
-    --font-size:14px;
+    --font-size:16px;
     --margin: calc(var(--font-size) / 10);
     --margin-bottom: calc(var(--font-size) / 1);
     margin: var(--margin);
@@ -135,16 +135,16 @@ html {
 }
 
 @media print {
-    .vscode-body h1 + .vscode-body p {
+    .vscode-body h1 + p {
         text-align:center;
     }
 }
 
-strong{
+.vscode-body strong{
     color: var(--color-danger);
 }
 
-em{
+.vscode-body em{
     text-decoration: underline;
 }
 
