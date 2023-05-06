@@ -1,3 +1,11 @@
+/* user agent stylesheet対策 */
+body,
+html {
+    padding: unset;
+    margin: unset;
+}
+
+/* body */
 .vscode-dark {
     --color-canvas-default: #1f2933;
     --color-canvas-muted: #323f4b;
@@ -24,12 +32,6 @@
     --color-headline-subtle: SeaGreen;
     --color-danger: red;
     --color-syntax:DarkGoldenrod;
-}
-
-body,
-html {
-    padding: unset;
-    margin: unset;
 }
 
 .vscode-body {
@@ -65,7 +67,6 @@ html {
 .vscode-body h2,
 .vscode-body h3{
     font-size: 200%;
-    padding-top: calc(var(--font-size) / 2);
 }
 
 .vscode-body h4,
@@ -75,15 +76,27 @@ html {
     display: table;
 }
 
-.vscode-body h1 {
-    text-align: center;
+.vscode-body h1,
+.vscode-body h2{
     background: var(--color-headline-default);
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+    padding-top: calc(var(--font-size) / 4);
+}
+
+.vscode-body h2 ,
+.vscode-body h3 {
+    border-bottom: solid calc(var(--font-size) * 0.8) var(--color-headline-subtle);
+    padding-left: calc(var(--font-size) / 2);
+}
+
+.vscode-body h1 {
+    text-align: center;
     box-shadow: var(--font-size) calc(var(--font-size) / 2) 0 var(--color-headline-muted), calc(var(--font-size) * 2) var(--font-size) 0 var(--color-headline-subtle);
     margin-right: calc(var(--font-size) * 2);
     margin-bottom: calc(var(--margin-bottom) + var(--font-size));
     border: none;
+    padding-top: calc(var(--font-size) / 4);
     padding-bottom: unset;
 }
 @media print {
@@ -93,13 +106,9 @@ html {
 }
 
 .vscode-body h2 {
-    background: var(--color-headline-default);
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
     border-left: solid var(--font-size) var(--color-headline-muted);
-    border-bottom: solid calc(var(--font-size) / 2) var(--color-headline-subtle);
-    padding-left: calc(var(--font-size) / 2);
 }
+
 @media print {
     .vscode-body h2 {
         page-break-before:always;
@@ -108,25 +117,24 @@ html {
 
 .vscode-body h3 {
     border-left: solid calc(var(--font-size) * 2) var(--color-headline-muted);
-    border-bottom: solid calc(var(--font-size) / 2) var(--color-headline-subtle);
-    padding-left: calc(var(--font-size) / 2);
 }
   
 .vscode-body h4 {
     font-size: 175%;
-    border-bottom: solid thick var(--color-headline-default);
+    border-bottom: solid calc(var(--font-size) * 0.6) var(--color-headline-default);
 }
 
 .vscode-body h5 {
     font-size: 150%;
-    border-bottom: solid medium var(--color-headline-muted);
+    border-bottom: solid calc(var(--font-size) * 0.4) var(--color-headline-muted);
 }
 
 .vscode-body h6 {
     font-size: 125%;
-    border-bottom: solid thin var(--color-headline-subtle);
+    border-bottom: solid calc(var(--font-size) * 0.2) var(--color-headline-subtle);
 }
 
+/* 文章・文字装飾 */
 .vscode-body p{
     margin: var(--margin);
     margin-bottom: var(--margin-bottom);
@@ -145,7 +153,11 @@ html {
 }
 
 .vscode-body em{
-    text-decoration: underline;
+    font-family:
+        YuMincho,    /* Mac用 */
+        'Yu Mincho',     /* Windows用 */
+        'Noto Serif JP';     /* Linux用 */
+    font-style: italic;
 }
 
 /* Table */
