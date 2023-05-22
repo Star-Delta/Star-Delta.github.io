@@ -120,6 +120,10 @@ body {
         padding-left: calc(var(--font-size) / 2);
     }
 
+    h2::before {
+        content: counter(h2) " ";
+    }
+    
     @media print {
         h2{
             page-break-before:always;
@@ -131,7 +135,11 @@ body {
         border-bottom: solid calc(var(--font-size) / 2) var(--color-headline-subtle);
         padding-left: calc(var(--font-size) / 2);
     }  
-
+    
+    h3::before {
+        content: counter(h2) "." counter(h3) " ";
+    }
+    
     h4 {
         font-size: 175%;
         border-bottom: solid thick var(--color-headline-default);
