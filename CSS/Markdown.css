@@ -91,7 +91,7 @@ body {
 
     h2,
     h3 {
-        border-bottom: solid calc(var(--font-size) * 0.8) var(--color-headline-subtle);
+        border-bottom: solid calc(var(--font-size) * 0.5 var(--color-headline-subtle);
         padding-left: calc(var(--font-size) / 2);
         }
 
