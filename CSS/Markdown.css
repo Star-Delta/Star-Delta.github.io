@@ -66,13 +66,12 @@ body {
     h6{
         margin: var(--margin);
         margin-bottom: var(--margin-bottom);
-    }
+        }
 
     h1,
     h2,
     h3{
-        font-size: 200%;
-        padding-top: calc(var(--font-size) / 2);
+        font-size:xx-large;
     }
 
     h4,
@@ -80,7 +79,7 @@ body {
     h6{
         position: relative;
         display: table;
-    }
+        }
 
     h1,
     h2{
@@ -88,13 +87,13 @@ body {
         print-color-adjust: exact;
         -webkit-print-color-adjust: exact;
         padding-top: calc(var(--font-size) / 4);
-    }
+        }
 
     h2,
     h3 {
         border-bottom: solid calc(var(--font-size) * 0.8) var(--color-headline-subtle);
         padding-left: calc(var(--font-size) / 2);
-    }
+        }
 
     h1 {
         text-align: center;
@@ -103,7 +102,7 @@ body {
         margin-bottom: calc(var(--margin-bottom) + var(--font-size));
         border: none;
         padding-bottom: unset;
-    }
+        }
 
     @media print {
         h1{
@@ -112,13 +111,10 @@ body {
     }
 
     h2 {
-        background: var(--color-headline-default);
-        print-color-adjust: exact;
-        -webkit-print-color-adjust: exact;
         border-left: solid var(--font-size) var(--color-headline-muted);
-        border-bottom: solid calc(var(--font-size) / 2) var(--color-headline-subtle);
-        padding-left: calc(var(--font-size) / 2);
-    }
+        counter-increment: h2;
+        counter-reset: h3;
+        }
 
     h2::before {
         content: counter(h2) " ";
@@ -132,27 +128,26 @@ body {
 
     h3 {
         border-left: solid calc(var(--font-size) * 2) var(--color-headline-muted);
-        border-bottom: solid calc(var(--font-size) / 2) var(--color-headline-subtle);
-        padding-left: calc(var(--font-size) / 2);
-    }  
-    
+        counter-increment: h3;
+        }  
+
     h3::before {
         content: counter(h2) "." counter(h3) " ";
     }
     
     h4 {
-        font-size: 175%;
-        border-bottom: solid thick var(--color-headline-default);
+        font-size:x-large;
+        border-bottom: solid calc(var(--font-size) * 0.6) var(--color-headline-default);
     }
 
     h5 {
-        font-size: 150%;
-        border-bottom: solid medium var(--color-headline-muted);
+        font-size:large;
+        border-bottom: solid calc(var(--font-size) * 0.4) var(--color-headline-muted);
     }
 
     h6 {
-        font-size: 125%;
-        border-bottom: solid thin var(--color-headline-subtle);
+        font-size:medium;
+        border-bottom: solid calc(var(--font-size) * 0.2) var(--color-headline-subtle);
     }
 /* Headline */
 
