@@ -119,7 +119,7 @@ html {
     }
 
     .vscode-body h2 {
-        border-left: solid var(--font-size) var(--color-headline-muted);
+        border-left: solid calc(var(--font-size) * 1) var(--color-headline-muted);
         counter-increment: h2;
         counter-reset: h3;
     }
@@ -135,7 +135,7 @@ html {
     }
 
     .vscode-body h3 {
-        border-left: solid calc(var(--font-size) * 2) var(--color-headline-muted);
+        border-left: solid calc(var(--font-size) * 0.5) var(--color-headline-muted);
         counter-increment: h3;
     }
 
@@ -145,12 +145,12 @@ html {
 
     .vscode-body h4 {
         font-size:x-large;
-        border-bottom: solid calc(var(--font-size) * 0.6) var(--color-headline-default);
+        border-bottom: solid calc(var(--font-size) * 0.5) var(--color-headline-default);
     }
 
     .vscode-body h5 {
         font-size:large;
-        border-bottom: solid calc(var(--font-size) * 0.4) var(--color-headline-muted);
+        border-bottom: solid calc(var(--font-size) * 0.35) var(--color-headline-muted);
     }
 
     .vscode-body h6 {
