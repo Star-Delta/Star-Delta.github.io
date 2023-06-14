@@ -158,7 +158,12 @@ body {
         border: unset;
         padding: unset;
     }
-
+    p:has(+ ul) ,
+    p:has(+ ol) {
+        margin-bottom: var(--margin);
+    }
+    
+    
     @media print {
         h1 + p {
             text-align:center;
