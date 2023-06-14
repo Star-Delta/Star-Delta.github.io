@@ -59,6 +59,11 @@ html {
     padding: unset;
 }
 
+.vscode-body p:has(+ ul) ,
+.vscode-body p:has(+ ol) {
+    margin-bottom: var(--margin);
+}
+
 @media print {
     .vscode-body h1+p {
         text-align: center;
