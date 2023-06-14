@@ -57,6 +57,23 @@ body {
     counter-reset: h2;
 }
 
+p{
+    margin: var(--margin);
+    margin-bottom: var(--margin-bottom);
+    border: unset;
+    padding: unset;
+}
+p:has(+ ul) ,
+p:has(+ ol) {
+    margin-bottom: var(--margin);
+}
+
+@media print {
+    h1 + p {
+        text-align:center;
+    }
+}
+
 /* Headline */
     h1,
     h2,
@@ -152,24 +169,6 @@ body {
 /* Headline */
 
 /* Text Decoration */
-    p{
-        margin: var(--margin);
-        margin-bottom: var(--margin-bottom);
-        border: unset;
-        padding: unset;
-    }
-    p:has(+ ul) ,
-    p:has(+ ol) {
-        margin-bottom: var(--margin);
-    }
-    
-    
-    @media print {
-        h1 + p {
-            text-align:center;
-        }
-    }
-
     strong{
         color: var(--color-danger);
     }
@@ -213,10 +212,10 @@ h6>code,
 li>code,
 th>code,
 td>code{
-    border: inset thin;
+    border: inset calc(var(--font-size) * 0.1);
     border-color: var(--color-border-default);
     border-radius: 5px;
-    padding:1px;
+    padding:calc(var(--font-size) * 0.05);
     /* color: var(--color-syntax); */
 }
 
@@ -224,7 +223,7 @@ pre>code,
 p>code,
 th>code,
 td>code{
-    font-size: calc(var(--font-size) * 0.9);
+    font-size: calc(var(--font-size) * 0.8);
 }
 
 
