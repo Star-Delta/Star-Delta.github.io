@@ -215,7 +215,7 @@ td>code{
     border: inset calc(var(--font-size) * 0.1);
     border-color: var(--color-border-default);
     border-radius: 5px;
-    padding:calc(var(--font-size) * 0.05);
+    margin:calc(var(--font-size) * 0.05);
     /* color: var(--color-syntax); */
 }
 
