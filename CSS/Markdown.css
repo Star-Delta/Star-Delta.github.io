@@ -234,7 +234,7 @@ p:has(+ ol) {
             "Hiragino Kaku Gothic ProN",	/* 和文コメント用：Mac OS X 10.5(2006年) */
             Meiryo,				/* 和文コメント用：Windows Vista(2006年) */
             monospace;				/* 上記以外 */
-            font-size: calc(var(--font-size) * 0.8);
+        font-size: calc(var(--font-size) * 0.8);
     }
 
     h1>code,
