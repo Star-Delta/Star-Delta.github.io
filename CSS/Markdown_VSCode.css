@@ -124,7 +124,7 @@ html {
     }
 
     .vscode-body h2 {
-        border-left: solid calc(var(--font-size) * 1) var(--color-headline-muted);
+        border-left: solid calc(var(--font-size) * 0.5) var(--color-headline-muted);
         counter-increment: h2;
         counter-reset: h3;
     }
@@ -140,7 +140,7 @@ html {
     }
 
     .vscode-body h3 {
-        border-left: solid calc(var(--font-size) * 0.5) var(--color-headline-muted);
+        border-left: solid calc(var(--font-size) * 1) var(--color-headline-muted);
         counter-increment: h3;
     }
 
