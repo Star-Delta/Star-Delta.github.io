@@ -1,0 +1,204 @@
+/* @theme MARP */
+
+section {
+    /* --logo: url(./MARP_Logo.png); */
+    --logo-size: 10%;
+    --logo-size-title: 50%;
+    --logo: url(https://3.bp.blogspot.com/-OJvoWxkTTB8/XGjx8Xq6uFI/AAAAAAABRdA/g9vIX6kCQH8IO-y1neLRRm39TaTc_nVDQCLcBGAs/s800/animal_gomafu_azarashi.png)
+}
+section {
+    --color-bg-default: white;
+    --color-bg-muted: LightGray;
+    --color-bg-subtle: DarkGray;
+    --color-text-default: black;
+    --color-text-muted: DimGray;
+    --color-text-subtle: Gray;
+    --color-text-danger: red;
+    --color-border-default: SlateGray;
+    --color-border-muted: LightSlateGray;
+}
+
+section {
+    background-color: var(--color-bg-default);
+    background-image: var(--logo);/*.md起点のPathを書く*/
+    background-size: var(--logo-size);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: top;
+}
+
+section {
+    width: 960px;
+    height: 720px;
+    font-size: 18px;
+    display: block;
+    padding: 2.5%;
+    color: var(--color-text-default);
+}
+
+section::after {
+    margin: 0.5%;
+    border: 1px solid var(--color-border-default);
+    padding: 1%;
+    content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+    font-style: italic;
+}
+
+section header,
+section footer {
+    position: absolute;
+    color: var(--color-text-muted);
+    font-size: 12px;
+    margin: 1px;
+}
+
+section header{
+    text-align: left;
+    left: 0%;
+    top: 0%;
+}
+
+section footer {
+    text-align: center;
+    left: 0%;
+    right: 0%;
+    bottom: 0px;
+}
+
+section footer::before {
+    content:"Copyright © ";
+}
+
+section p,
+section img{
+    display: inline-block;
+    vertical-align: top;
+    margin: auto 0%;
+    padding: 0;
+}
+strong {
+    color: var(--color-text-danger);
+}
+
+em {
+    text-decoration: underline;
+}
+
+section h1,
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+    margin: auto 0%;
+    padding: 0%;
+}
+
+section h2 {
+    font-size: 150%;
+    border-bottom: 5px double var(--color-border-default);
+}
+
+section h3 {
+    font-size: 140%;
+}
+
+section h4 {
+    font-size: 130%;
+}
+
+section h5 {
+    font-size: 120%;
+}
+
+section h6 {
+    font-size: 110%;
+}
+
+section pre,
+section code,
+section blockquote {
+    border-color: var(--color-border-default);
+    padding: 3px;
+    background-color: var(--color-bg-muted);
+    font-style: italic;
+}
+
+section pre,
+section code {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 90%;
+}
+
+section pre code {
+    border-style:unset;
+}
+
+section blockquote {
+    margin: auto 0;
+    border-left-width: 4px ;
+    border-left-style: solid ;
+    /* padding-left: 4px; */
+    color: var(--color-text-muted);
+}
+
+section table ,
+section table th ,
+section table td {
+    border-width:1px;
+    border-style: solid;
+    border-color: var(--color-border-default);
+}
+
+section table {
+    margin: auto 0%;
+    padding: 0;
+    border-spacing: 0;
+    border-collapse: 0;
+}
+
+section table th {
+    background-color:var(--color-bg-subtle);
+}
+
+section table tr {
+    background-color:var(--color-bg-default);
+}
+
+section table tr:nth-child(2n) {
+    background-color:var(--color-bg-muted);
+}
+
+section table tr:nth-child(2n) code,
+section blockquote code {
+    background-color:var(--color-bg-default);
+}
+
+section.Title {
+    background-size: var(--logo-size-title);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+}
+
+section.Title{
+    display:table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+section.Title h1 {
+    margin-top: 0px;
+    font-size: 300%;
+    border-bottom:none
+}
+
+section.Title p {
+    font-size: 150%;
+    margin-top: 15px;
+    display: block;
+}
+
