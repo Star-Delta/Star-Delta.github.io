@@ -94,13 +94,10 @@ section h6 {
     padding: 0%;
 }
 
-section h2 {
+section h2 ,
+section h3 {
     font-size: 150%;
     border-bottom: 5px double var(--color-border-default);
-}
-
-section h3 {
-    font-size: 140%;
 }
 
 section h4 {
