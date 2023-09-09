@@ -98,6 +98,7 @@ section h2 {
     font-size: 150%;
     border-bottom: 5px double var(--color-border-default);
 }
+
 section h3 {
     font-size: 150%;
     border-bottom: 2.5px solid var(--color-border-default);
