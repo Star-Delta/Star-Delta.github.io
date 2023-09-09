@@ -1,5 +1,4 @@
 /* @theme MARP */
-
 section {
     /* --logo: url(./MARP_Logo.png); */
     --logo-size: 10%;
@@ -34,9 +33,8 @@ section {
     display: block;
     padding: 2.5%;
     color: var(--color-text-default);
-    counter-reset: h2;
-
 }
+
 
 section::after {
     margin: 0.5%;
@@ -78,11 +76,11 @@ section img{
     margin: auto 0%;
     padding: 0;
 }
-strong {
+section strong {
     color: var(--color-text-danger);
 }
 
-em {
+section em {
     text-decoration: underline;
 }
 
@@ -96,29 +94,14 @@ section h6 {
     padding: 0%;
 }
 
-section h2 ,
-section h3 {
+section h2 {
     font-size: 150%;
     border-bottom: 5px double var(--color-border-default);
 }
-
-section h2 {
-    counter-increment: h2;
-    counter-reset: h3;
-}
-
-    section h2::before {
-    content: counter(h2) " ";
-}
-
 section h3 {
-    counter-increment: h3;
+    font-size: 150%;
+    border-bottom: 2.5px solid var(--color-border-default);
 }
-
-section h3::before {
-    content: counter(h2) "." counter(h3) " ";
-}
-
 section h4 {
     font-size: 130%;
 }
