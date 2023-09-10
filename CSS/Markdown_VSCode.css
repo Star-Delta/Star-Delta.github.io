@@ -74,30 +74,23 @@ h6{
         -webkit-print-color-adjust: exact;
         padding-top: calc(var(--font-size) * 0.25);
     }
-    & h2,
-    & h3 {
-        border-bottom: solid calc(var(--font-size) * 0.25) var(--color-headline-subtle);
-        padding-left: calc(var(--font-size) / 2);
-    }
-    & h4,
-    & h5{
-        position: relative;
-        display: table;
-    }
     & h1 {
-        text-align: center;
-        box-shadow: var(--font-size) calc(var(--font-size) / 2) 0 var(--color-headline-muted), calc(var(--font-size) * 2) var(--font-size) 0 var(--color-headline-subtle);
         margin-right: calc(var(--font-size) * 2);
         margin-bottom: calc(var(--margin-bottom) + var(--font-size));
         border: none;
         padding-bottom: unset;
+        box-shadow: var(--font-size) calc(var(--font-size) / 2) 0 var(--color-headline-muted), calc(var(--font-size) * 2) var(--font-size) 0 var(--color-headline-subtle);
         font-size:xx-large;
+        text-align: center;
         @media print {
-                margin-top: 50vh;
+            margin-top: 50vh;
+            + p {text-align: center;}
         }
     }
     & h2 {
         border-left: solid calc(var(--font-size) * 0.5) var(--color-headline-muted);
+        border-bottom: solid calc(var(--font-size) * 0.25) var(--color-headline-subtle);
+        padding-left: calc(var(--font-size) / 2);
         font-size:xx-large;
         counter-increment: h2;
         counter-reset: h3;
@@ -110,6 +103,8 @@ h6{
     }
     & h3 {
         border-left: solid calc(var(--font-size) * 1) var(--color-headline-muted);
+        border-bottom: solid calc(var(--font-size) * 0.25) var(--color-headline-subtle);
+        padding-left: calc(var(--font-size) / 2);
         font-size:xx-large;
         counter-increment: h3;
         &::before {
@@ -119,39 +114,35 @@ h6{
     & h4 {
         font-size:x-large;
         border-bottom: solid calc(var(--font-size) * 0.66) var(--color-headline-default);
+        position: relative;
+        display: table;
     }
     & h5 {
         font-size:large;
         border-bottom: solid calc(var(--font-size) * 0.33) var(--color-headline-muted);
+        position: relative;
+        display: table;
     }
     & h6 {
+        margin: var(--margin);
         font-size:xx-small;
         &::before {content: '[*';}
         &::after {content: ']';}
-    }
-    /* HeadLine */
-}
-
-
-/* characters and sentences */
-    .vscode-body p:has(+ ul) ,
-    .vscode-body p:has(+ ol) {
-        margin-bottom: var(--margin);
-    }
-    .vscode-body h6+p {
-        font-size: xx-small;
-    }
-    @media print {
-        .vscode-body h1+p {
-            text-align: center;
+        + p {
+            font-size: xx-small;
         }
     }
-
-    .vscode-body strong {
+    /* HeadLine */
+    /* characters and sentences */
+    /* & p:has(+ ul) ,
+    & p:has(+ ol) {
+        margin-bottom: var(--margin);
+    } */
+    & strong {
         color: var(--color-danger);
     }
-    
-    .vscode-body em {
+
+    & em {
         font-family:
             /* 英語 */
             'Segoe Script',/* Windows用 */
@@ -162,66 +153,57 @@ h6{
             serif;
         font-style: italic;
     }
-/* characters and sentences */
-    
-    .vscode-body hr {
-        background-color: var(--color-border-default);
+    /* characters and sentences */
+    /* Table */
+    & table {
         margin: var(--margin);
         margin-bottom: var(--margin-bottom);
-        border: var(--border);
-        padding: var(--padding);
-    }
-
-/* Table */
-    .vscode-body table {
-        margin: var(--margin);
-        margin-bottom: var(--margin-bottom);
-        border-style: solid;
         border-width: medium;
+        border-style: solid;
         border-color: var(--color-border-default);
         border-spacing: unset;
         padding: unset;
+        & thead {
+            background-color: var(--color-canvas-subtle);
+            border-bottom: thin solid var(--color-border-subtle);
+            & tr {
+                & th {
+                    border-style:  none solid;
+                    border-width: thin;
+                    border-color: var(--color-border-default);
+                    padding: calc(var(--font-size) * 0.1) calc(var(--font-size) * 0.2);
+                }
+            }
+        }
+        & tbody {
+            border-top: thin solid var(--color-border-subtle);
+            & tr {
+                & td {
+                    border-style: dotted solid;
+                    border-width: thin;
+                    border-color: var(--color-border-default);
+                    padding: calc(var(--font-size) * 0.1) calc(var(--font-size) * 0.2);
+                }
+            }
+            > tr:nth-of-type(2n-0){
+                background-color: var(--color-canvas-muted);
+            }
+        }
     }
-
-    .vscode-body th,
-    .vscode-body td {
-        margin: unset;
-        border-style: solid;
-        border-width: thin;
-        border-color: var(--color-border-default);
-        padding: calc(var(--font-size) * 0.1) calc(var(--font-size) * 0.2);
-    }
-
-    .vscode-body td {
-        border-top-style: dotted;
-        border-bottom-style: dotted;
-    }
-
-    .vscode-body thead>tr {
+    /* Table */
+    /* CodeBlock */
+    & pre {
         background-color: var(--color-canvas-subtle);
-    }
-
-    .vscode-body tbody>tr:nth-of-type(2n-0) {
-        background-color: var(--color-canvas-muted);
-    }
-/* Table */
-
-/* CodeBlock */
-    .vscode-body pre ,
-    .vscode-body code {
-        background-color: var(--color-canvas-muted);
-        margin: var(--margin);
         border-radius: calc(var(--font-size) * 0.225);
-    }
-
-    .vscode-body pre {
+        margin: var(--margin);
         margin-bottom: var(--margin-bottom);
         border: calc(var(--font-size) * 0.1) solid var(--color-border-default);
         padding: calc(var(--font-size) * 0.25);
     }
-
-    .vscode-body code {
-        font-size: calc(var(--font-size) * 0.9);
+    & code {
+        background-color: var(--color-canvas-subtle);
+        border-radius: calc(var(--font-size) * 0.225);
+        font-size: calc(100% * 0.9);
         font-family:
             Menlo,/* Mac OS X 10.6(2009年) */
             Consolas,/* Windows Vista(2006年) */
@@ -230,9 +212,28 @@ h6{
             monospace;/* 上記以外 */
         line-height: 1;
     }
-
-    .vscode-body pre>code {
-        margin:0;
+    /* CodeBlock */
+    /* Decoration */
+    & hr {
+        background-color: var(--color-border-default);
+        margin: var(--margin);
+        margin-bottom: var(--margin-bottom);
+        border: var(--border);
+        padding: var(--padding);
     }
-
-/* CodeBlock */
+    & blockquote{
+        background-color: var(--color-canvas-muted);
+        border: unset;
+        border-left: solid calc(var(--font-size) / 2) var(--color-border-default);
+        padding-left: calc(var(--font-size) / 2);
+    }
+    /* Decoration */
+    /* List */
+    & li {
+        & ol ,
+        & ul {
+            margin-bottom: unset;
+        }
+    }
+    /* List */
+}
