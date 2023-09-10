@@ -1,8 +1,15 @@
 /* user agent stylesheet対策 */
 body,
-html {
-    padding: unset;
-    margin: unset;
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin: inherit;
+    border: inherit;
+    padding: inherit;
 }
 
 .vscode-dark {
@@ -33,142 +40,117 @@ html {
     --color-syntax: DarkGoldenrod;
 }
 
+.markdown-body ,
 .vscode-body {
+    --margin: calc(var(--font-size) * 0.1);
+    --margin-bottom: var(--font-size);
+    --border: none;
+    --padding:none;
     --font-size: 16px;
-    --margin: calc(var(--font-size) / 10);
-    --margin-bottom: calc(var(--font-size) / 1);
+    --line-height: calc(var(--font-size) * 1.25);
+}
+
+.markdown-body ,
+.vscode-body {
+    background-color: var(--color-canvas-default);
     margin: var(--margin);
     margin-bottom: var(--margin-bottom);
-    border: none;
-    padding: none;
-    background-color: var(--color-canvas-default);
+    border: var(--border);
+    padding: var(--padding);
     font-size: var(--font-size);
+    line-height: var(--line-height);
     font-family:
         "Helvetica Neue",
         "Hiragino Kaku Gothic ProN",
         Meiryo,
         sans-selif;
-    line-height: 1.2;
     counter-reset: h2;
-}
 
-.vscode-body p {
-    margin: var(--margin);
-    margin-bottom: var(--margin-bottom);
-    border: unset;
-    padding: unset;
-}
-
-.vscode-body p:has(+ ul) ,
-.vscode-body p:has(+ ol) {
-    margin-bottom: var(--margin);
-}
-
-@media print {
-    .vscode-body h1+p {
-        text-align: center;
-    }
-}
-
-/* HeadLine */
-    .vscode-body h1,
-    .vscode-body h2,
-    .vscode-body h3,
-    .vscode-body h4,
-    .vscode-body h5,
-    .vscode-body h6 {
-        margin: var(--margin);
-        margin-bottom: var(--margin-bottom);
-    }
-
-    .vscode-body h1,
-    .vscode-body h2,
-    .vscode-body h3 {
-        font-size:xx-large;
-    }
-
-    .vscode-body h4,
-    .vscode-body h5,
-    .vscode-body h6 {
-        position: relative;
-        display: table;
-    }
-
-    .vscode-body h1,
-    .vscode-body h2 {
+    /* HeadLine */
+    & h1,
+    & h2 {
         background: var(--color-headline-default);
         print-color-adjust: exact;
         -webkit-print-color-adjust: exact;
-        padding-top: calc(var(--font-size) / 4);
+        padding-top: calc(var(--font-size) * 0.25);
     }
-
-    .vscode-body h2,
-    .vscode-body h3 {
-        border-bottom: solid calc(var(--font-size) * 0.5) var(--color-headline-subtle);
+    & h2,
+    & h3 {
+        border-bottom: solid calc(var(--font-size) * 0.25) var(--color-headline-subtle);
         padding-left: calc(var(--font-size) / 2);
     }
-
-    .vscode-body h1 {
+    & h4,
+    & h5{
+        position: relative;
+        display: table;
+    }
+    & h1 {
         text-align: center;
         box-shadow: var(--font-size) calc(var(--font-size) / 2) 0 var(--color-headline-muted), calc(var(--font-size) * 2) var(--font-size) 0 var(--color-headline-subtle);
         margin-right: calc(var(--font-size) * 2);
         margin-bottom: calc(var(--margin-bottom) + var(--font-size));
         border: none;
         padding-bottom: unset;
-    }
-
-    @media print {
-        .vscode-body h1 {
-            margin-top: 50vh;
+        font-size:xx-large;
+        @media print {
+                margin-top: 50vh;
         }
     }
-
-    .vscode-body h2 {
+    & h2 {
         border-left: solid calc(var(--font-size) * 0.5) var(--color-headline-muted);
+        font-size:xx-large;
         counter-increment: h2;
         counter-reset: h3;
+        &::before {
+            content: counter(h2) " ";
+        }
+        @media print {
+                page-break-before: always;
+        }
     }
-
-    .vscode-body h2::before {
-        content: counter(h2) " ";
+    & h3 {
+        border-left: solid calc(var(--font-size) * 1) var(--color-headline-muted);
+        font-size:xx-large;
+        counter-increment: h3;
+        &::before {
+            content: counter(h2) "." counter(h3) " ";
+        }
     }
+    & h4 {
+        font-size:x-large;
+        border-bottom: solid calc(var(--font-size) * 0.66) var(--color-headline-default);
+    }
+    & h5 {
+        font-size:large;
+        border-bottom: solid calc(var(--font-size) * 0.33) var(--color-headline-muted);
+    }
+    & h6 {
+        font-size:xx-small;
+        &::before {content: '[*';}
+        &::after {content: ']';}
+    }
+    /* HeadLine */
+}
 
+
+/* characters and sentences */
+    .vscode-body p:has(+ ul) ,
+    .vscode-body p:has(+ ol) {
+        margin-bottom: var(--margin);
+    }
+    .vscode-body h6+p {
+        font-size: xx-small;
+    }
     @media print {
-        .vscode-body h2 {
-            page-break-before: always;
+        .vscode-body h1+p {
+            text-align: center;
         }
     }
 
-    .vscode-body h3 {
-        border-left: solid calc(var(--font-size) * 1) var(--color-headline-muted);
-        counter-increment: h3;
-    }
-
-    .vscode-body h3::before {
-        content: counter(h2) "." counter(h3) " ";
-    }
-
-    .vscode-body h4 {
-        font-size:x-large;
-        border-bottom: solid calc(var(--font-size) * 0.5) var(--color-headline-default);
-    }
-
-    .vscode-body h5 {
-        font-size:large;
-        border-bottom: solid calc(var(--font-size) * 0.35) var(--color-headline-muted);
-    }
-
-    .vscode-body h6 {
-        font-size:medium;
-        border-bottom: solid calc(var(--font-size) * 0.2) var(--color-headline-subtle);
-    }
-/* HeadLine */
-
-/* Text Decoration */
     .vscode-body strong {
         color: var(--color-danger);
     }
-
+    
     .vscode-body em {
         font-family:
             /* 英語 */
@@ -180,7 +162,15 @@ html {
             serif;
         font-style: italic;
     }
-/* Text Decoration */
+/* characters and sentences */
+    
+    .vscode-body hr {
+        background-color: var(--color-border-default);
+        margin: var(--margin);
+        margin-bottom: var(--margin-bottom);
+        border: var(--border);
+        padding: var(--padding);
+    }
 
 /* Table */
     .vscode-body table {
@@ -217,18 +207,32 @@ html {
 /* Table */
 
 /* CodeBlock */
-    .vscode-body pre {
+    .vscode-body pre ,
+    .vscode-body code {
         background-color: var(--color-canvas-muted);
         margin: var(--margin);
+        border-radius: calc(var(--font-size) * 0.225);
+    }
+
+    .vscode-body pre {
         margin-bottom: var(--margin-bottom);
-        border: inset thin;
-        border-color: var(--color-border-default);
+        border: calc(var(--font-size) * 0.1) solid var(--color-border-default);
         padding: calc(var(--font-size) * 0.25);
+    }
+
+    .vscode-body code {
+        font-size: calc(var(--font-size) * 0.9);
         font-family:
             Menlo,/* Mac OS X 10.6(2009年) */
             Consolas,/* Windows Vista(2006年) */
             "Hiragino Kaku Gothic ProN",/* 和文コメント用：Mac OS X 10.5(2006年) */
             Meiryo,/* 和文コメント用：Windows Vista(2006年) */
             monospace;/* 上記以外 */
+        line-height: 1;
     }
+
+    .vscode-body pre>code {
+        margin:0;
+    }
+
 /* CodeBlock */
