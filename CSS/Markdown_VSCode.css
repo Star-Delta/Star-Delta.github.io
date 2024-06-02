@@ -42,7 +42,7 @@ h6{
 
 .markdown-body ,
 .vscode-body {
-    --margin: calc(var(--font-size) * 0.1);
+    --margin: calc(var(--font-size) * 0.5);
     --margin-bottom: var(--font-size);
     --border: none;
     --padding:none;
