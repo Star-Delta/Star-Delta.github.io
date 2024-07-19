@@ -1,5 +1,3 @@
-<link href="https://star-delta.github.io/CSS/Markdown_VSCode.css" rel="stylesheet">
-
 repo:[Star-Delta.github.io](https://github.com/Star-Delta/Star-Delta.github.io)
 
 当リポジトリにて公開されているドキュメントについて
