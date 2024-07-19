@@ -6,6 +6,7 @@
 @media (prefers-color-scheme: dark) {
     body {
         color-scheme: dark;
+        --color-font: White;
         --color-canvas-default: #1f2933;
         --color-canvas-muted: #323f4b;
         --color-canvas-subtle: #3e4c59;
@@ -23,6 +24,7 @@
 @media (prefers-color-scheme: light) {
     body {
         color-scheme: light;
+        --color-font: Black;
         --color-canvas-default: White;
         --color-canvas-muted: GhostWhite;
         --color-canvas-subtle: WhiteSmoke;
@@ -47,6 +49,7 @@ body {
     padding: none;
     background-color: var(--color-canvas-default);
     font-size: var(--font-size);
+    color: var(--color-font);
     font-family:
         "Helvetica Neue",
         "Hiragino Kaku Gothic ProN",
