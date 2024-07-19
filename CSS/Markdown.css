@@ -127,7 +127,7 @@ p:has(+ ol) {
         box-shadow: var(--font-size) calc(var(--font-size) / 2) 0 var(--color-headline-muted), calc(var(--font-size) * 2) var(--font-size) 0 var(--color-headline-subtle);
         margin-right: calc(var(--font-size) * 2);
         margin-bottom: calc(var(--margin-bottom) + var(--font-size));
-        border: none;
+        border: unset;
         padding-bottom: unset;
     }
 

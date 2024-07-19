@@ -13,6 +13,7 @@ h6{
 }
 
 .vscode-dark {
+    --color-font: White;
     --color-canvas-default: #1f2933;
     --color-canvas-muted: #323f4b;
     --color-canvas-subtle: #3e4c59;
@@ -25,8 +26,26 @@ h6{
     --color-danger: red;
     --color-syntax: Goldenrod;
 }
+@media (prefers-color-scheme: dark) {
+    body {
+        color-scheme: dark;
+        --color-font: White;
+        --color-canvas-default: #1f2933;
+        --color-canvas-muted: #323f4b;
+        --color-canvas-subtle: #3e4c59;
+        --color-border-default: #52606d;
+        --color-border-muted: #616e7c;
+        --color-border-subtle: #7b8794;
+        --color-headline-default: DarkOliveGreen;
+        --color-headline-muted: Olive;
+        --color-headline-subtle: OliveDrab;
+        --color-danger: red;
+        --color-syntax: Goldenrod;
+        }
+}
 
 .vscode-light {
+    --color-font: Black;
     --color-canvas-default: White;
     --color-canvas-muted: GhostWhite;
     --color-canvas-subtle: WhiteSmoke;
@@ -39,6 +58,24 @@ h6{
     --color-danger: red;
     --color-syntax: DarkGoldenrod;
 }
+@media (prefers-color-scheme: light) {
+    body {
+        color-scheme: light;
+        --color-font: Black;
+        --color-canvas-default: White;
+        --color-canvas-muted: GhostWhite;
+        --color-canvas-subtle: WhiteSmoke;
+        --color-border-default: LightGray;
+        --color-border-muted: DarkGray;
+        --color-border-subtle: Gray;
+        --color-headline-default: DarkSeaGreen;
+        --color-headline-muted: MediumSeaGreen;
+        --color-headline-subtle: SeaGreen;
+        --color-danger: red;
+        --color-syntax: DarkGoldenrod;
+        }
+}
+
 
 .markdown-body ,
 .vscode-body {
@@ -57,8 +94,9 @@ h6{
     margin-bottom: var(--margin-bottom);
     border: var(--border);
     padding: var(--padding);
-    font-size: var(--font-size);
     line-height: var(--line-height);
+    font-size: var(--font-size);
+    color: var(--color-font);
     font-family:
         "Helvetica Neue",
         "Hiragino Kaku Gothic ProN",
