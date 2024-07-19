@@ -1,4 +1,5 @@
 /* user agent stylesheet対策 */
+.vscode-body ,
 body,
 html,
 h1,
@@ -7,7 +8,7 @@ h3,
 h4,
 h5,
 h6{
-    margin: inherit;
+    margin: 0;
     border: inherit;
     padding: inherit;
 }
@@ -77,8 +78,8 @@ h6{
 }
 
 
-.markdown-body ,
-.vscode-body {
+/* .vscode-body , */
+.markdown-body {
     --margin: calc(var(--font-size) * 0.5);
     --margin-bottom: var(--font-size);
     --border: none;
@@ -88,10 +89,14 @@ h6{
     --line-height: 1.5;
 }
 
-.markdown-body ,
-.vscode-body {
+body {
     background-color: var(--color-canvas-default);
-    margin: var(--margin);
+}
+
+/* .vscode-body , */
+.markdown-body {
+    /* margin: var(--margin); */
+    margin:0.5cm;
     margin-bottom: var(--margin-bottom);
     border: var(--border);
     padding: var(--padding);
@@ -114,6 +119,14 @@ h6{
         padding-top: calc(var(--font-size) * 0.25);
         padding-bottom: calc(var(--font-size) * 0);
         line-height:1;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    & h2,
+    & h3,
+    & h4,
+    & h5 {
+        margin-bottom: calc(var(--margin-bottom));
     }
 
     & h1,
@@ -147,6 +160,9 @@ h6{
         @media print {
                 page-break-before: always;
         }
+        ~ :not(h1 ,h2 ,h3) {
+            margin-left: calc(var(--font-size) * 1);
+        }
     }
     & h3 {
         border-left: solid calc(var(--font-size) * 1) var(--color-headline-muted);
@@ -156,6 +172,9 @@ h6{
         counter-increment: h3;
         &::before {
             content: counter(h2) "." counter(h3) " ";
+        }
+        ~ :not(h1 ,h2 ,h3) {
+            margin-left: calc(var(--font-size) * 1.5);
         }
     }
     & h4 {
