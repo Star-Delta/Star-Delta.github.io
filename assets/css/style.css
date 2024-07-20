@@ -1,3 +1,5 @@
+/* 利用する際の注意点→https://star-delta.github.io/ */
+
 /* user agent stylesheet対策 */
 .vscode-body ,
 body,
@@ -9,8 +11,8 @@ h4,
 h5,
 h6{
     margin: 0;
-    border: inherit;
-    padding: inherit;
+    border: 0;
+    padding: 0;
 }
 
 .vscode-dark {
@@ -116,11 +118,11 @@ body {
     & h3,
     & h4,
     & h5{
+        margin-left: 0;
+        margin-right: 0;
         padding-top: calc(var(--font-size) * 0.25);
         padding-bottom: calc(var(--font-size) * 0);
         line-height:1;
-        margin-left: 0;
-        margin-right: 0;
     }
     & h2,
     & h3,
@@ -189,6 +191,7 @@ body {
         position: relative;
         display: table;
     }
+    /* HeadLine */
     & h6 {
         margin: var(--margin);
         font-size:xx-small;
@@ -198,7 +201,7 @@ body {
             font-size: xx-small;
         }
     }
-    /* HeadLine */
+    
     /* characters and sentences */
     & p:has(+ ul) ,
     & p:has(+ ol) {
