@@ -93,12 +93,12 @@ h6{
 
 body {
     background-color: var(--color-canvas-default);
+    margin:0.5cm;
 }
 
 /* .vscode-body , */
 .markdown-body {
     /* margin: var(--margin); */
-    margin:0.5cm;
     margin-bottom: var(--margin-bottom);
     border: var(--border);
     padding: var(--padding);
@@ -110,7 +110,6 @@ body {
         "Hiragino Kaku Gothic ProN",
         Meiryo,
         sans-selif;
-    counter-reset: h2;
 
     /* HeadLine */
     & h1,
@@ -148,6 +147,7 @@ body {
             margin-top: 50vh;
             + p {text-align: center;}
         }
+        counter-reset: h2;
     }
     & h2 {
         border-left: solid calc(var(--font-size) * 0.5) var(--color-headline-muted);
@@ -192,6 +192,7 @@ body {
         display: table;
     }
     /* HeadLine */
+
     & h6 {
         margin: var(--margin);
         font-size:xx-small;
