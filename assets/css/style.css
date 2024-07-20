@@ -82,7 +82,8 @@ h6{
 
 /* .vscode-body , */
 .markdown-body {
-    --margin: calc(var(--font-size) * 0.5);
+    /* --margin: calc(var(--font-size) * 0.5); */
+    --margin: 0.5cm;
     --margin-bottom: var(--font-size);
     --border: none;
     --padding:none;
@@ -99,7 +100,7 @@ body {
 /* .vscode-body , */
 .markdown-body {
     /* margin: var(--margin); */
-    margin-bottom: var(--margin-bottom);
+    /* margin-bottom: var(--margin-bottom); */
     border: var(--border);
     padding: var(--padding);
     line-height: var(--line-height);
