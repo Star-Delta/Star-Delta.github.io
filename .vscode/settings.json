@@ -1,0 +1,6 @@
+{
+    "markdown.styles": [
+        "CSS/VSCode_MarkdownPreview.css",
+        "CSS/Markdown.css"
+    ]
+}
