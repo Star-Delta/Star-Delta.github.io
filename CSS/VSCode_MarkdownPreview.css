@@ -1,7 +1,5 @@
 /* 利用する際の注意点→https://star-delta.github.io/ */
 
-/* user agent stylesheet対策 */
-
 .vscode-dark {
     --color-font: White;
     --color-canvas-default: #1f2933;
@@ -30,8 +28,9 @@
     --color-danger: red;
     --color-syntax: DarkGoldenrod;
 }
-/* 
 .vscode-body {
-    margin: 0.5cm;
+    /* margin: 0; */
+    padding-right:0;
+    padding-left:0;
+    background-color: var(--color-canvas-default);
 } 
-*/
