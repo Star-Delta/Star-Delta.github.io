@@ -5,14 +5,14 @@
 @import url(../../CSS/Markdown.css);
 
 @media (prefers-color-scheme: dark) {
-    .markdown-body {
+    body {
         color-scheme: dark;
         --color-canvas-default: #1f2933;
         }
 }
 
 @media (prefers-color-scheme: light) {
-    .markdown-body {
+    body {
         color-scheme: light;
         --color-canvas-default: White;
         }

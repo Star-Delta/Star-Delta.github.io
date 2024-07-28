@@ -1,0 +1,47 @@
+/* 利用する際の注意点→https://star-delta.github.io/ */
+
+/* user agent stylesheet対策 */
+.vscode-body ,
+body,
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.vscode-dark {
+    --color-font: White;
+    --color-canvas-default: #1f2933;
+    --color-canvas-muted: #323f4b;
+    --color-canvas-subtle: #3e4c59;
+    --color-border-default: #52606d;
+    --color-border-muted: #616e7c;
+    --color-border-subtle: #7b8794;
+    --color-headline-default: DarkOliveGreen;
+    --color-headline-muted: Olive;
+    --color-headline-subtle: OliveDrab;
+    --color-danger: red;
+    --color-syntax: Goldenrod;
+}
+.vscode-light {
+    --color-font: Black;
+    --color-canvas-default: White;
+    --color-canvas-muted: GhostWhite;
+    --color-canvas-subtle: WhiteSmoke;
+    --color-border-default: LightGray;
+    --color-border-muted: DarkGray;
+    --color-border-subtle: Gray;
+    --color-headline-default: DarkSeaGreen;
+    --color-headline-muted: MediumSeaGreen;
+    --color-headline-subtle: SeaGreen;
+    --color-danger: red;
+    --color-syntax: DarkGoldenrod;
+}
+
+

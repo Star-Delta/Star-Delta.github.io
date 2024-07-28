@@ -1,10 +1,7 @@
-/* 
-参考にしたサイト(ありがとうございます。)
-* [とほほのフォント入門](https://www.tohoho-web.com/ex/font.html)
-  * フォント周り
-*/
+/* 利用する際の注意点→https://star-delta.github.io/ */
+
 @media (prefers-color-scheme: dark) {
-    body {
+    .markdown-body {
         color-scheme: dark;
         --color-font: White;
         --color-canvas-default: #1f2933;
@@ -22,7 +19,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-    body {
+    .markdown-body {
         color-scheme: light;
         --color-font: Black;
         --color-canvas-default: White;
@@ -39,15 +36,26 @@
         }
 }
 
-body {
+
+/* .vscode-body , */
+.markdown-body {
+    /* --margin: calc(var(--font-size) * 0.5); */
+    --margin: 0.5cm;
+    --margin-bottom: var(--font-size);
+    --border: none;
+    --padding:none;
     --font-size: 16px;
-    --margin: calc(var(--font-size) / 10);
-    --margin-bottom: calc(var(--font-size) / 1);
-    margin: var(--margin);
-    margin-bottom: var(--margin-bottom);
-    border: none;
-    padding: none;
-    background-color: var(--color-canvas-default);
+    /* --line-height: calc(var(--font-size) * 1.25); */
+    --line-height: 1.5;
+}
+
+/* .vscode-body , */
+.markdown-body {
+    /* margin: var(--margin); */
+    /* margin-bottom: var(--margin-bottom); */
+    border: var(--border);
+    padding: var(--padding);
+    line-height: var(--line-height);
     font-size: var(--font-size);
     color: var(--color-font);
     font-family:
@@ -55,209 +63,200 @@ body {
         "Hiragino Kaku Gothic ProN",
         Meiryo,
         sans-selif;
-    line-height: 1.2;
-    counter-reset: h2;
-}
 
-p{
-    margin: var(--margin);
-    margin-bottom: var(--margin-bottom);
-    border: unset;
-    padding: unset;
-}
-
-p:has(+ ul) ,
-p:has(+ ol) {
-    margin-bottom: var(--margin);
-}
-
-@media print {
-    h1 + p {
-        text-align:center;
+    /* HeadLine */
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5{
+        margin-left: 0;
+        margin-right: 0;
+        padding-top: calc(var(--font-size) * 0.25);
+        padding-bottom: calc(var(--font-size) * 0);
+        line-height:1;
     }
-}
-
-/* Headline */
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6{
-        margin: var(--margin);
-        margin-bottom: var(--margin-bottom);
-        }
-
-    h1,
-    h2,
-    h3{
-        font-size:xx-large;
+    & h2,
+    & h3,
+    & h4,
+    & h5 {
+        margin-bottom: calc(var(--margin-bottom));
     }
 
-    h4,
-    h5,
-    h6{
-        position: relative;
-        display: table;
-        }
-
-    h1,
-    h2{
+    & h1,
+    & h2 {
         background: var(--color-headline-default);
         print-color-adjust: exact;
         -webkit-print-color-adjust: exact;
-        padding-top: calc(var(--font-size) / 4);
-        }
-
-    h2,
-    h3 {
-        border-bottom: solid calc(var(--font-size) * 0.5) var(--color-headline-subtle);
-        padding-left: calc(var(--font-size) / 2);
     }
-
-    @media print {
-        h2,
-        h3{
-            page-break-before:always;
-        }
-    }
-    
-    h1 {
-        text-align: center;
-        box-shadow: var(--font-size) calc(var(--font-size) / 2) 0 var(--color-headline-muted), calc(var(--font-size) * 2) var(--font-size) 0 var(--color-headline-subtle);
+    & h1 {
         margin-right: calc(var(--font-size) * 2);
         margin-bottom: calc(var(--margin-bottom) + var(--font-size));
-        border: unset;
-        padding-bottom: unset;
-    }
-
-    @media print {
-        h1{
+        border: none;
+        box-shadow: var(--font-size) calc(var(--font-size) / 2) 0 var(--color-headline-muted), calc(var(--font-size) * 2) var(--font-size) 0 var(--color-headline-subtle);
+        font-size:xx-large;
+        text-align: center;
+        @media print {
             margin-top: 50vh;
+            + p {text-align: center;}
         }
+        counter-reset: h2;
     }
-
-    h2 {
-        border-left: solid var(--font-size) var(--color-headline-muted);
+    & h2 {
+        border-left: solid calc(var(--font-size) * 0.5) var(--color-headline-muted);
+        border-bottom: solid calc(var(--font-size) * 0.25) var(--color-headline-subtle);
+        padding-left: calc(var(--font-size) / 2);
+        font-size:xx-large;
         counter-increment: h2;
         counter-reset: h3;
+        &::before {
+            content: counter(h2) " ";
         }
-
-    h2::before {
-        content: counter(h2) " ";
+        @media print {
+                page-break-before: always;
+        }
+        ~ :not(h1 ,h2 ,h3) {
+            margin-left: calc(var(--font-size) * 1);
+        }
     }
-    
-    h3 {
-        border-left: solid calc(var(--font-size) * 2) var(--color-headline-muted);
+    & h3 {
+        border-left: solid calc(var(--font-size) * 1) var(--color-headline-muted);
+        border-bottom: solid calc(var(--font-size) * 0.25) var(--color-headline-subtle);
+        padding-left: calc(var(--font-size) / 2);
+        font-size:xx-large;
         counter-increment: h3;
-        }  
+        &::before {
+            content: counter(h2) "." counter(h3) " ";
+        }
+        ~ :not(h1 ,h2 ,h3) {
+            margin-left: calc(var(--font-size) * 1.5);
+        }
+    }
+    & h4 {
+        font-size:x-large;
+        border-bottom: solid calc(var(--font-size) * 0.66) var(--color-headline-default);
+        position: relative;
+        display: table;
+    }
+    & h5 {
+        font-size:large;
+        border-bottom: solid calc(var(--font-size) * 0.33) var(--color-headline-muted);
+        position: relative;
+        display: table;
+    }
+    /* HeadLine */
 
-    h3::before {
-        content: counter(h2) "." counter(h3) " ";
+    & h6 {
+        margin: var(--margin);
+        font-size:xx-small;
+        &::before {content: '[*';}
+        &::after {content: ']';}
+        + p {
+            font-size: xx-small;
+        }
     }
     
-    h4 {
-        font-size:x-large;
-        border-bottom: solid calc(var(--font-size) * 0.6) var(--color-headline-default);
+    /* characters and sentences */
+    & p:has(+ ul) ,
+    & p:has(+ ol) {
+        margin-bottom: 0;
     }
-
-    h5 {
-        font-size:large;
-        border-bottom: solid calc(var(--font-size) * 0.4) var(--color-headline-muted);
-    }
-
-    h6 {
-        font-size:medium;
-        border-bottom: solid calc(var(--font-size) * 0.2) var(--color-headline-subtle);
-    }
-/* Headline */
-
-/* Text Decoration */
-    strong{
+    & strong {
         color: var(--color-danger);
     }
-    em{
-        font-family:
-            YuMincho,    /* Mac用 */
-            'Yu Mincho',     /* Windows用 */
-            'Noto Serif JP';     /* Linux用 */
-        font-style: italic;
-        /* text-decoration: underline; */
-    }
-/* Text Decoration */
 
-/* table */
-    table {
+    & em {
+        font-family:
+            /* 英語 */
+            'Segoe Script',/* Windows用 */
+            /* 明朝体 */
+            YuMincho,/* Mac用 */
+            'Yu Mincho',/* Windows用 */
+            'Noto Serif JP',/* Linux用 */
+            serif;
+        font-style: italic;
+    }
+    /* characters and sentences */
+    /* Table */
+    & table {
         margin: var(--margin);
         margin-bottom: var(--margin-bottom);
-        border:solid calc(var(--font-size) * 0.1);
-        border-color:var(--color-border-default);
+        border-width: medium;
+        border-style: solid;
+        border-color: var(--color-border-default);
         border-spacing: unset;
         padding: unset;
+        & thead {
+            background-color: var(--color-canvas-subtle);
+            border-bottom: thin solid var(--color-border-subtle);
+            & tr {
+                & th {
+                    border-style:  none solid;
+                    border-width: thin;
+                    border-color: var(--color-border-default);
+                    padding: calc(var(--font-size) * 0.1) calc(var(--font-size) * 0.2);
+                }
+            }
+        }
+        & tbody {
+            border-top: thin solid var(--color-border-subtle);
+            & tr {
+                & td {
+                    border-style: dotted solid;
+                    border-width: thin;
+                    border-color: var(--color-border-default);
+                    padding: calc(var(--font-size) * 0.1) calc(var(--font-size) * 0.2);
+                }
+            }
+            > tr:nth-of-type(2n-0){
+                background-color: var(--color-canvas-muted);
+            }
+        }
     }
-
-    th,
-    td {
-        margin: unset;
-        border-style:dotted solid;
-        border-width: calc(var(--font-size) * 0.05);
-        border-color:var(--color-border-default);
-        padding: calc(var(--font-size) * 0.1) calc(var(--font-size) * 0.2);
-    }
-
-    thead>tr {
+    /* Table */
+    /* CodeBlock */
+    & pre {
         background-color: var(--color-canvas-subtle);
-    }
-
-    tbody>tr:nth-of-type(2n-0){
-        background-color: var(--color-canvas-muted);
-    }
-/* table */
-
-/* Code Block */
-    pre {
+        border-radius: calc(var(--font-size) * 0.225);
         margin: var(--margin);
         margin-bottom: var(--margin-bottom);
-        overflow: auto;
+        border: calc(var(--font-size) * 0.1) solid var(--color-border-default);
+        padding: calc(var(--font-size) * 0.25);
     }
-
-    code,
-    blockquote>div>pre{
-        border: solid calc(var(--font-size) * 0.1);
-        border-color: var(--color-border-default);
-        border-radius: calc(var(--font-size) * 0.2);
-        margin: calc(var(--font-size) * 0.25);
-    }
-
-    code,
-    span{
+    & code {
+        background-color: var(--color-canvas-subtle);
+        border-radius: calc(var(--font-size) * 0.225);
+        font-size: calc(100% * 0.9);
         font-family:
-            Menlo,				/* Mac OS X 10.6(2009年) */
-            Consolas,				/* Windows Vista(2006年) */
-            "Hiragino Kaku Gothic ProN",	/* 和文コメント用：Mac OS X 10.5(2006年) */
-            Meiryo,				/* 和文コメント用：Windows Vista(2006年) */
-            monospace;				/* 上記以外 */
-        font-size: calc(var(--font-size) * 0.8);
+            Menlo,/* Mac OS X 10.6(2009年) */
+            Consolas,/* Windows Vista(2006年) */
+            "Hiragino Kaku Gothic ProN",/* 和文コメント用：Mac OS X 10.5(2006年) */
+            Meiryo,/* 和文コメント用：Windows Vista(2006年) */
+            monospace;/* 上記以外 */
+        line-height: 1;
     }
-
-    h1>code,
-    h2>code,
-    h3>code,
-    h4>code,
-    h5>code,
-    h6>code{
-    font-size: inherit;
-    }
-/* Code Block */
-
-/* blockquote */
-    blockquote{
-        background-color: var(--color-canvas-muted);
+    /* CodeBlock */
+    /* Decoration */
+    & hr {
+        background-color: var(--color-border-default);
         margin: var(--margin);
         margin-bottom: var(--margin-bottom);
+        border: var(--border);
+        padding: var(--padding);
+    }
+    & blockquote{
+        background-color: var(--color-canvas-muted);
         border: unset;
         border-left: solid calc(var(--font-size) / 2) var(--color-border-default);
-        padding: unset;
         padding-left: calc(var(--font-size) / 2);
     }
-/* blockquote */
+    /* Decoration */
+    /* List */
+    & li {
+        & ol ,
+        & ul {
+            margin-bottom: unset;
+        }
+    }
+    /* List */
+}
