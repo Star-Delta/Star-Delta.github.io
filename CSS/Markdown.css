@@ -51,6 +51,7 @@
 
 /* .vscode-body , */
 .markdown-body {
+    background-color: var(--color-canvas-default);
     /* margin: var(--margin); */
     /* margin-bottom: var(--margin-bottom); */
     border: var(--border);
