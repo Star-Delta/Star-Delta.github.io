@@ -1,19 +1,6 @@
 /* 利用する際の注意点→https://star-delta.github.io/ */
 
 /* user agent stylesheet対策 */
-.vscode-body ,
-body,
-html,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
-    margin: 0;
-    border: 0;
-    padding: 0;
-}
 
 .vscode-dark {
     --color-font: White;
@@ -43,5 +30,8 @@ h6{
     --color-danger: red;
     --color-syntax: DarkGoldenrod;
 }
-
-
+/* 
+.vscode-body {
+    margin: 0.5cm;
+} 
+*/
