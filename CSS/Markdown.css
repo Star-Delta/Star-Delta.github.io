@@ -180,7 +180,7 @@
     /* characters and sentences */
     /* Table */
     & table {
-        margin: var(--margin);
+        /* margin: var(--margin); */
         margin-bottom: var(--margin-bottom);
         border-width: medium;
         border-style: solid;
