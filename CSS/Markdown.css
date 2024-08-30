@@ -244,6 +244,7 @@
         margin: var(--margin);
         margin-bottom: var(--margin-bottom);
         border: 1px;
+        border-style:solid;
         padding: var(--padding);
     }
     & blockquote{
