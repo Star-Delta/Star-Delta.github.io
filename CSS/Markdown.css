@@ -219,7 +219,8 @@
     & pre {
         background-color: var(--color-canvas-subtle);
         border-radius: calc(var(--font-size) * 0.225);
-        margin: var(--margin);
+        /* margin: var(--margin); */
+        margin: 0;
         margin-bottom: var(--margin-bottom);
         border: calc(var(--font-size) * 0.1) solid var(--color-border-default);
         padding: calc(var(--font-size) * 0.25);
