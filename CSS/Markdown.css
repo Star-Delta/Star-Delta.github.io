@@ -243,7 +243,7 @@
         background-color: var(--color-border-default);
         margin: var(--margin);
         margin-bottom: var(--margin-bottom);
-        border: var(--border);
+        border: 1px;
         padding: var(--padding);
     }
     & blockquote{
