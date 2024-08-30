@@ -13,12 +13,15 @@ repo:[Star-Delta.github.io](https://github.com/Star-Delta/Star-Delta.github.io)
 * 自己責任でご利用ください
 * 引用などされる際は以下のURL(当サイト)も記載してください
   * [https://star-delta.github.io/](https://star-delta.github.io/)
+* 何かあればissueを投げていただければ気付くかもしれません。
+  * 意識してみているわけではないので気付かなかったらすいません。
 
 ## コンテンツ
-
 ### 番号で見る年間カレンダー
 Dowmload:[週番号で見る年間カレンダー.pdf](https://github.com/Star-Delta/Star-Delta.github.io/tree/main/AnnualCalendar)
 
 #### 概要
 週番号で1年を見られるカレンダーがなかったので自分用に自作しました。  
-日曜・祝日を赤文字にしています。
+日曜・祝日を赤文字にしています。  
+1,4,7,10月始まりを用意しています、お好きなものをご利用ください。  
+A4サイズをベースに作成しています。  
