@@ -255,6 +255,11 @@
     }
     /* Decoration */
     /* List */
+    & ol ,
+    & ul {
+        padding-left: calc(var(--font-size) * 2);
+    }
+
     & li {
         & ol ,
         & ul {
