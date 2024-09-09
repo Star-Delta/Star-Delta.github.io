@@ -18,7 +18,7 @@ repo:[Star-Delta.github.io](https://github.com/Star-Delta/Star-Delta.github.io)
 
 ## コンテンツ
 ### 週番号で見る年間カレンダー
-Dowmload:[週番号で見る年間カレンダー.pdf](https://github.com/Star-Delta/Star-Delta.github.io/tree/main/AnnualCalendar)
+Dowmload:[週番号で見る年間カレンダー](https://github.com/Star-Delta/Star-Delta.github.io/tree/main/AnnualCalendar)
 
 #### 概要
 週番号で1年を見られるカレンダーがなかったので自分用に自作しました。  
