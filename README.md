@@ -3,7 +3,7 @@ repo:[Star-Delta.github.io](https://github.com/Star-Delta/Star-Delta.github.io)
 ----
 1. [当リポジトリにて公開されているドキュメントについて](#当リポジトリにて公開されているドキュメントについて)
 2. [コンテンツ](#コンテンツ)
-   1. [番号で見る年間カレンダー](#番号で見る年間カレンダー)
+   1. [週番号で見る年間カレンダー](#週番号で見る年間カレンダー)
 
 ## 当リポジトリにて公開されているドキュメントについて
 * 制作者が個人利用することのみを想定して公開されたものになります。
@@ -17,7 +17,7 @@ repo:[Star-Delta.github.io](https://github.com/Star-Delta/Star-Delta.github.io)
   * 意識してみているわけではないので気付かなかったらすいません。
 
 ## コンテンツ
-### 番号で見る年間カレンダー
+### 週番号で見る年間カレンダー
 Dowmload:[週番号で見る年間カレンダー.pdf](https://github.com/Star-Delta/Star-Delta.github.io/tree/main/AnnualCalendar)
 
 #### 概要
