@@ -3,8 +3,7 @@ repo:[Star-Delta.github.io](https://github.com/Star-Delta/Star-Delta.github.io)
 ----
 1. [当リポジトリにて公開されているドキュメントについて](#当リポジトリにて公開されているドキュメントについて)
 2. [コンテンツ](#コンテンツ)
-   1. [血糖値グラフ](#血糖値グラフ)
-   2. [週番号で見る年間カレンダー](#週番号で見る年間カレンダー)
+   1. [週番号で見る年間カレンダー](#週番号で見る年間カレンダー)
 
 ## 当リポジトリにて公開されているドキュメントについて
 * 制作者が個人利用することのみを想定して公開されたものになります
@@ -17,10 +16,6 @@ repo:[Star-Delta.github.io](https://github.com/Star-Delta/Star-Delta.github.io)
   * 意識してみているわけではないので気付かなかったらすいません
 
 ## コンテンツ
-### 血糖値グラフ
-管理する必要が出てきたので、取得した数値をグラフ化する。  
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT2Si7xIcl7nzEQLjMOxTJBVPbgWLy63jS9rqYVMz2V36DU40uyWcKSgcczYZyGdqyTqIOZLi_H1M84/pubhtml?gid=672175546&amp;single=false&amp;widget=false&amp;headers=false&amp;chrome=false" width="95%" height="240" scrolling="no"></iframe>
-
 ### 週番号で見る年間カレンダー
 Dowmload:[週番号で見る年間カレンダー](https://github.com/Star-Delta/Star-Delta.github.io/tree/main/AnnualCalendar)
 
