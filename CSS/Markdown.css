@@ -243,9 +243,9 @@
         background-color: var(--color-border-default);
         /* margin: var(--margin); */
         /* margin-bottom: var(--margin-bottom); */
-        border: 1px;
-        border-style:solid;
-        padding: var(--padding);
+        border: 0;
+        /* border-style:solid; */
+        padding: 1px;
     }
     & blockquote{
         background-color: var(--color-canvas-muted);
