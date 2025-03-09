@@ -34,3 +34,7 @@
     padding-left:0;
     background-color: var(--color-canvas-default);
 } 
+
+html {
+    padding: 0;
+}
