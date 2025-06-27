@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Markdown 全機能プレビュー</title>
+  <link rel="stylesheet" href="https://star-delta.github.io/CSS/Markdown.css">
+  <style>
+    body {
+      background: #f0f0f0;
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <article class="markdown-body">
+    <h1>見出し 1</h1>
+    <h2>見出し 2</h2>
+    <h3>見出し 3</h3>
+    <h4>見出し 4</h4>
+    <h5>見出し 5</h5>
+    <h6>見出し 6</h6>
+
+    <p>これは通常の段落です。</p>
+    <p>これは <strong>太字</strong> と <em>斜体</em>、<strong><em>両方</em></strong> の例。</p>
+    <p>打ち消し: <del>これは消されたテキストです</del></p>
+    <p>インラインコード: <code>const a = 1;</code></p>
+
+    <blockquote>
+      <p>これは引用です。</p>
+      <blockquote>
+        <p>ネストされた引用。</p>
+      </blockquote>
+    </blockquote>
+
+    <ul>
+      <li>箇条書きリスト</li>
+      <li>別のアイテム</li>
+      <li>ネスト:
+        <ul>
+          <li>ネスト1</li>
+          <li>ネスト2</li>
+        </ul>
+      </li>
+    </ul>
+
+    <ol>
+      <li>番号付きリスト</li>
+      <li>別の番号</li>
+    </ol>
+
+    <ul>
+      <li>[ ] チェックボックス（未完了）</li>
+      <li>[x] チェックボックス（完了）</li>
+    </ul>
+
+    <pre><code>// コードブロック
+function test() {
+  console.log("Hello, Markdown!");
+}
+</code></pre>
+
+    <hr>
+
+    <p>リンク: <a href="https://example.com">https://example.com</a></p>
+    <p>画像: <img src="https://via.placeholder.com/150" alt="ダミー画像"></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>列1</th>
+          <th>列2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>データ1</td>
+          <td>データ2</td>
+        </tr>
+        <tr>
+          <td colspan="2">結合セル</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>HTMLタグテスト: <mark>markタグ</mark> や <u>下線</u>、<sup>上付き</sup>、<sub>下付き</sub></p>
+
+    <p>エスケープ文字: \*これは強調ではありません\*</p>
+  </article>
+</body>
+</html>
