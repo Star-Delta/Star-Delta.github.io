@@ -145,7 +145,7 @@
     /* HeadLine */
 
     & h6 {
-        margin: var(--margin);
+        margin: 0;
         font-size:xx-small;
         &::before {content: '[*';}
         &::after {content: ']';}
