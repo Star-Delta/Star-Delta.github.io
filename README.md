@@ -26,11 +26,11 @@ repo:[Star-Delta.github.io](https://github.com/Star-Delta/Star-Delta.github.io)
 
 
 ### 週番号で見る年間カレンダー
-Dowmload:[週番号で見る年間カレンダー](https://github.com/Star-Delta/Star-Delta.github.io/tree/main/WeeknumCalendar)
+Dowmload:[WeeknumCalendar](https://github.com/Star-Delta/Star-Delta.github.io/tree/main/WeeknumCalendar)
 
 #### 概要
 週番号で1年を見られるカレンダーがなかったので自分用に自作しました。  
-日曜・祝日を赤文字にしています。  
+内閣府が公表している[国民の祝日](https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html)に基づき祝日を赤文字にしています。  
 1,4,7,10月始まりを用意しています、お好きなものをご利用ください。  
 A4サイズをベースに作成しています。  
 
