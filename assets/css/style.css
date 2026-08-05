@@ -2,7 +2,7 @@
     https://star-delta.github.io/ 
 */
 
-@import url(../../CSS/Markdown.css);
+@import url(https://cdn.jsdelivr.net/gh/Star-Delta/Markdown-CSS@latest/Markdown.css);
 
 @media (prefers-color-scheme: dark) {
     body {
