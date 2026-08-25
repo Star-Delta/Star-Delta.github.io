@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <title>{{ site.title }}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Star-Delta/Markdown-CSS@0/Markdown.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Star-Delta/Markdown-CSS@0/Markdown_Print.css"
-    media="print"></head>
+        media="print">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+
 <body>
     <main class="markdown-body">
         {{ content }}
     </main>
 </body>
+
 </html>

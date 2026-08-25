@@ -1,24 +1,3 @@
-/*
-    https://star-delta.github.io/ 
-*/
-
-@import url(https://cdn.jsdelivr.net/gh/Star-Delta/Markdown-CSS@0/Markdown.css);
-
-@media (prefers-color-scheme: dark) {
-    body {
-        color-scheme: dark;
-        --color-canvas-default: #1f2933;
-        }
-}
-
-@media (prefers-color-scheme: light) {
-    body {
-        color-scheme: light;
-        --color-canvas-default: White;
-        }
-}
-
 body {
-    background-color: var(--color-canvas-default);
-    /* margin:0.5cm; */
+    margin: 0;
 }
