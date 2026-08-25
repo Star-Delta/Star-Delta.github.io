@@ -13,8 +13,10 @@ Star-Deltaが管理するホームページです。
 ![Icon](favicon.ico)
 
 #### 関連アカウント
+
 | Service,Platform | UserName                                                           |
 | ---------------- | ------------------------------------------------------------------ |
+| GitHub           | [Star-Delta](https://github.com/Star-Delta)                        |
 | Misskey.io       | [@StarDelta@misskey.io](https://misskey.io/@StarDelta)             |
 | ぼすきー         | [@StarDelta@voskey.icalo.net](https://voskey.icalo.net/@StarDelta) |
 | Twitter          | [@StarDelta_twit](https://twitter.com/StarDelta_twit)              |
