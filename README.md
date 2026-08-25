@@ -13,12 +13,12 @@ Star-Deltaが管理するホームページです。
 ![Icon](favicon.ico)
 
 #### 関連アカウント
-|Service,Platform|UserName|
-|-|-|
-|Misskey.io|[@StarDelta@misskey.io](https://misskey.io/@StarDelta)|
-|ぼすきー|[@StarDelta@voskey.icalo.net](https://voskey.icalo.net/@StarDelta)|
-|Twitter|[@StarDelta_twit](https://twitter.com/StarDelta_twit)|
-|niconico|[Star-Delta](https://www.nicovideo.jp/user/87317)|
+| Service,Platform | UserName                                                           |
+| ---------------- | ------------------------------------------------------------------ |
+| Misskey.io       | [@StarDelta@misskey.io](https://misskey.io/@StarDelta)             |
+| ぼすきー         | [@StarDelta@voskey.icalo.net](https://voskey.icalo.net/@StarDelta) |
+| Twitter          | [@StarDelta_twit](https://twitter.com/StarDelta_twit)              |
+| niconico         | [Star-Delta](https://www.nicovideo.jp/user/87317)                  |
 
 ## 作成したもの
 ### 週番号で見る年間カレンダー
