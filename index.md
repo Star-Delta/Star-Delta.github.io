@@ -6,8 +6,7 @@
    1. [Markdown-CSS](#markdown-css)
    2. [Markdown\_Preview](#markdown_preview)
 4. [管理者について](#管理者について)
-   1. [関連アカウント](#関連アカウント)
-   2. [ライセンス](#ライセンス)
+   1. [ライセンス](#ライセンス)
 
 ## このサイトについて
 Star-Deltaが管理するホームページです。  
@@ -33,8 +32,7 @@ WebブラウザでMarkdownをプレビューするツール
 `Star-Delta`という名前で、主に以下のようなアイコンを使用して活動しています。  
 ![Icon](favicon.ico)
 
-### 関連アカウント
-| Service,Platform | UserName                                                           |
+| 所有アカウント | UserName                                                           |
 | ---------------- | ------------------------------------------------------------------ |
 | GitHub           | [Star-Delta](https://github.com/Star-Delta)                        |
 | Misskey.io       | [@StarDelta@misskey.io](https://misskey.io/@StarDelta)             |
