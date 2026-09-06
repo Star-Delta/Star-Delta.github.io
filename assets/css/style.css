@@ -1,10 +1,20 @@
 /* "https://cdn.jsdelivr.net/gh/Star-Delta/Markdown-CSS@0/Markdown.css"のカラーパレットを参照しています。 */
 
 body {
-    background-color: var(--color-background);
+    background-color: var(--color-background-muted);
     margin: 0;
 }
+
 .site-footer {
     color: var(--color-font);
     text-align: center;
+}
+
+.markdown-body {
+    max-width: 1024px;
+    margin-inline: auto;
+
+    @media screen and (min-width: 1025px) {
+        border: 5px solid var(--color-border);
+    }
 }

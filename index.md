@@ -1,12 +1,4 @@
 # Star-Deltaのホームページ
-1. [このサイトについて](#このサイトについて)
-2. [お知らせ](#お知らせ)
-   1. [2026/09/06](#20260906)
-3. [作成したもの](#作成したもの)
-   1. [Markdown-CSS](#markdown-css)
-   2. [Markdown\_Preview](#markdown_preview)
-4. [管理者について](#管理者について)
-   1. [ライセンス](#ライセンス)
 
 ## このサイトについて
 Star-Deltaが管理するホームページです。  
@@ -33,12 +25,12 @@ WebブラウザでMarkdownをプレビューするツール
 ![Icon](favicon.ico)
 
 | 所有アカウント | UserName                                                           |
-| ---------------- | ------------------------------------------------------------------ |
-| GitHub           | [Star-Delta](https://github.com/Star-Delta)                        |
-| Misskey.io       | [@StarDelta@misskey.io](https://misskey.io/@StarDelta)             |
-| ぼすきー         | [@StarDelta@voskey.icalo.net](https://voskey.icalo.net/@StarDelta) |
-| Twitter          | [@StarDelta_twit](https://twitter.com/StarDelta_twit)              |
-| niconico         | [Star-Delta](https://www.nicovideo.jp/user/87317)                  |
+| -------------- | ------------------------------------------------------------------ |
+| GitHub         | [Star-Delta](https://github.com/Star-Delta)                        |
+| Misskey.io     | [@StarDelta@misskey.io](https://misskey.io/@StarDelta)             |
+| ぼすきー       | [@StarDelta@voskey.icalo.net](https://voskey.icalo.net/@StarDelta) |
+| Twitter        | [@StarDelta_twit](https://twitter.com/StarDelta_twit)              |
+| niconico       | [Star-Delta](https://www.nicovideo.jp/user/87317)                  |
 
 ### ライセンス
 別途記載のあるものを除き、本サイトのコンテンツのうち
