@@ -5,6 +5,17 @@ body {
     margin: 0;
 }
 
+.site-header {
+    margin-block: 5px;
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-inline: auto;
+    }
+}
+
 .site-footer {
     color: var(--color-font);
     text-align: center;
