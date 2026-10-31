@@ -31,6 +31,32 @@
             <a href="https://creativecommons.org/licenses/by-nd/4.0/deed.ja" rel="license">CC BY-ND 4.0</a>
         </small>
     </footer>
+
+    <!-- Mermaid描画処理 -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@12.2.0/dist/mermaid.esm.min.mjs';
+
+        mermaid.initialize({
+            startOnLoad: false,
+            securityLevel: 'strict',
+            theme: 'default'
+        });
+
+        const diagrams = [];
+
+        document.querySelectorAll('.markdown-body pre > code.language-mermaid')
+            .forEach((code) => {
+                const diagram = document.createElement('div');
+                diagram.className = 'mermaid';
+                diagram.textContent = code.textContent;
+                code.parentElement.replaceWith(diagram);
+                diagrams.push(diagram);
+            });
+
+        if (diagrams.length > 0) {
+            await mermaid.run({ nodes: diagrams });
+        }
+    </script>
 </body>
 
 </html>
