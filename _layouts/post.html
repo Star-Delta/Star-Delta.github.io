@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<h1>{{ page.title | escape }}</h1>
+<small style="display:block; text-align:right;">{{ page.date | date: "%Y/%m/%d" }}<b>[Create]</b></small>
+
+{{ content }}
+
+<small style="display:block; text-align:left;"><b>[categories]</b>{{ page.categories | join: ", " }}</small>
+<small style="display:block; text-align:left;"><b>[tags]</b>{{ page.tags | join: ", " }}</small>

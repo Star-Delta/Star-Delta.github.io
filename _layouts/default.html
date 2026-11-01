@@ -17,11 +17,28 @@
             <img src="{{ '/Banner.png' | relative_url }}" alt="Star-Deltaのホームページ" width="468" height="60">
         </a>
     </header>
+    
+    <hr>
+    
+    <div class="container">
+        <main class="markdown-body">
+            {{ content }}
+        </main>
 
-    <main class="markdown-body">
-        {{ content }}
-    </main>
+        <nav class="navigation-menu">
+            <p>サイトコンテンツ</p>
+            <hr>
+            <ul>
+                <li><a href="{{ '/' | relative_url }}">ホーム</a></li>
+                <li><a href="{{ '/Notice/Notice' | relative_url }}">お知らせ</a></li>
+                <li><a href="{{ '/Blog/Blog' | relative_url }}">ブログ</a></li>
+                <li><a href="{{ '/About' | relative_url }}">このサイトについて</a></li>
+            </ul>
+        </nav>
+    </div>
 
+    <hr>
+    
     <footer class="site-footer">
         <small>
             &copy; {{ site.time | date: "%Y" }} Star-Delta

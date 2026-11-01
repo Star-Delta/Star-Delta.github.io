@@ -1,1 +1,9 @@
 title: Star-Deltaのホームページ
+theme: null
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
