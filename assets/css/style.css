@@ -42,6 +42,7 @@ hr {
 .navigation-menu {
     flex-shrink: 0;
     border: 5px solid var(--color-border);
+    padding-inline: 0.5rem;
 }
 
 .container {
