@@ -1,7 +1,7 @@
 ---
 tags: Markdown-CSS
 ---
-https://github.com/Star-Delta/Markdown-CSS/releases/tag/v0.6.0  
+[v0.6.0](https://github.com/Star-Delta/Markdown-CSS/releases/tag/v0.6.0)  
 今回の変更により見出しのスタイルが大きく変わるため、ご注意ください。
 
 ## 変更点
