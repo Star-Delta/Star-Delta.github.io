@@ -1,7 +1,7 @@
 # Star-Deltaのホームページ
 ## 最近のお知らせ
 {% for post in site.categories["Notice"] limit:5 %}
-* [{{ post.date | date: "%Y/%m/%d" }}「{{ post.title }}」]({{ post.url }})
+* [{{ post.date | date: "%Y/%m/%d" }}「{{ post.slug }}」]({{ post.url }})
 {% endfor %}
 すべてのお知らせは[こちら]({{ '/Notice/Notice' | relative_url }})
 
