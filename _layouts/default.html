@@ -4,7 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ page.slug }}|{{ site.title }}</title>
+    <title>
+        {%- if page.title == site.title -%}
+            {{ site.title | escape }}
+        {%- elsif page.collection == 'posts' -%}
+            {{ page.slug | escape }}|{{ site.title | escape }}
+        {%- else -%}
+            {{ page.title | escape }}|{{ site.title | escape }}
+        {%- endif -%}
+    </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Star-Delta/Markdown-CSS@0.6/Markdown.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Star-Delta/Markdown-CSS@0.6/Markdown_Print.css"
         media="print">
