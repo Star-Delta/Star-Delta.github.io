@@ -7,3 +7,5 @@ defaults:
       type: posts
     values:
       layout: post
+
+timezone: Asia/Tokyo
