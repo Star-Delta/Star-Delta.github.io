@@ -8,3 +8,32 @@ layout: default
 
 <small style="display:block; text-align:left;"><b>[categories]</b>{{ page.categories | join: ", " }}</small>
 <small style="display:block; text-align:left;"><b>[tags]</b>{{ page.tags | join: ", " }}</small>
+
+<p>
+    <button
+        type="button"
+        id="copy-post-link"
+        data-title="{{ page.slug | escape }}"
+        data-url="{{ page.url | relative_url | escape }}">
+        共有用リンクをコピー
+    </button>
+    <span id="copy-post-status" role="status"></span>
+</p>
+
+<script>
+    const copyButton = document.getElementById('copy-post-link');
+    const copyStatus = document.getElementById('copy-post-status');
+
+    copyButton.addEventListener('click', async () => {
+        try {
+            const title = document.title.replace(/[\\[\]]/g, '\\$&');
+            const url = new URL(copyButton.dataset.url, window.location.href)
+                .href.replace(/\(/g, '%28').replace(/\)/g, '%29');
+
+            await navigator.clipboard.writeText(`[${title}](${url})`);
+            copyStatus.textContent = 'コピーしました。';
+        } catch {
+            copyStatus.textContent = 'コピーできませんでした。';
+        }
+    });
+</script>
